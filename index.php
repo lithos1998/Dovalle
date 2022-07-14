@@ -214,16 +214,6 @@
                         <p>Matricula CPIC Nº9779</p>
                     </div>
                 </div>
-                <div class="persona-equipo">
-                    <div class="foto">
-                        <img src="img/foto2.jpg" alt="">
-                    </div>
-                    <div class="texto">
-                        <h3>Pascual Dopazo</h3>
-                        <h4>Maestro Mayor de Obras</h4>
-                        <p>Matricula CPIC Nº9939</p>
-                    </div>
-                </div>
             </div>
         </div>
         
