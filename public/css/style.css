@@ -555,13 +555,75 @@ body{
 
         .index-services .services .data .service{
             flex-direction: row;
-            width: 100% !important;
+            width: 70% !important;
+            height: 100% !important;
+            margin: 20px 0px;
         }
 
-        .index-services .services .data .service a{
-           margin-right: 100px;
+        /* .index-services .services .data .service img{
+            height: 300px;
+            width: 300px;
+        } */
+
+        .index-services .services .data .service div{
+            margin-left: 40px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            flex-wrap: wrap;
         }
 
+        .index-services .services .data .service div h3{
+            margin-bottom: 20px;
+            text-align: start !important;
+        }
+
+        .index-services .services .data .service div p{
+            font-family: var(--roboto-medium);
+            color: var(--dark-gray);            
+        }
+
+        .original{
+            display: inline;
+        }
+
+        .see-more{
+            cursor: pointer;
+            display: inline-block;
+            color: #666;
+            font-size: 19px;
+            line-height: 2;
+            margin-top: 10px;
+        }
+
+        .extra{
+            opacity: 0;
+            max-height: 0;
+            font-size: 0;
+            transition: .25s ease;   
+        }
+
+        input[type='checkbox']{
+            position: relative;
+            height: 50px;
+            display: none;
+            appearance: none;
+        }
+
+        input[type='checkbox'] ~ .see-more:before{
+            content: '▽ Ver mas. ';
+        }
+          
+        input[type='checkbox']:checked ~ .see-more:before{
+            content: 'Ver menos. △' ;
+        }
+
+        .extra:has(~input[type='checkbox']:checked){
+            opacity: 1;
+            font-size: inherit;
+            max-height: 999em;
+        }
     /* services index */
 
     /* services show */        
@@ -609,12 +671,46 @@ body{
 
 
 /* footer */
-footer{
-    margin-top: 100px;
-    background-color: var(--dark-gray);
-    width: 100%;
-    height: 300px;
-}
+    footer{
+        margin-top: 100px;
+        background-color: var(--dark-gray);
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 100px;
+    }
+
+    .contact-footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-footer div{
+        display: flex;
+        flex-direction: row;
+        color: var(--main-white);
+        font-size: 22px;
+        margin: 10px 0px;
+        align-items: center;
+    }
+
+    .contact-footer div .box{
+        margin: 0px !important;
+    }
+
+    .footer-logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-logo img{
+        width: 300px;
+    }
 
 /* footer */
 

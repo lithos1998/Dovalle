@@ -1,16 +1,82 @@
 <?php
+
 class Data{
     public static $services = [
-        'ley_257' => ['Ley 257', 'ley_257', 'fa-solid fa-gavel', 'inmobiliaria'],
-        'avisos_obra' => ['Avisos de obra', 'avisos_obra', 'fa-solid fa-file-signature', 'inmobiliaria'],
-        'planos_suminsitro_gas' => ['Planos de suministro de gas', 'planos_suminsitro_gas', 'fa-regular fa-map', 'inmobiliaria'],
-        'planos_evacuacion' => ['Planos de evacuacion', 'planos_evacuacion', 'fa-solid fa-person-running', 'inmobiliaria'],
-        'obleas' => ['Obleas', 'obleas', 'fa-solid fa-file-invoice', 'inmobiliaria'],
-        'puesta_a_tierra' => ['Medicion de puesta a tierra', 'puesta_a_tierra', 'fa-solid fa-plug', 'inmobiliaria'],
-        'habilitaciones' => ['Habilitaciones', 'habilitaciones', 'fa-solid fa-file-circle-check', 'administracion'],
-        'informe_factibilidad' => ['Informe de factibilidad', 'informe_factibilidad', 'fa-solid fa-paste', 'administracion'],
-        'solicitud_planos' => ['Solicitud de planos', 'solicitud_planos', 'fa-solid fa-clipboard-check', 'both'],
-        'informe dominio' => ['Informe de dominio', 'informe dominio', 'fa-solid fa-file-lines', 'both'],
-        'subdivision' => ['Subdivision', 'subdivision', 'fa-solid fa-table-cells-large', 'administracion'],
+        'ley_257' => [
+            'name' => 'Ley 257', 
+            'id' => 'ley_257', 
+            'class' => 'fa-solid fa-gavel', 
+            'type' => 'inmobiliaria'
+        ],
+        'avisos_obra' => [
+            'name' => 'Avisos de obra', 
+            'id' => 'avisos_obra', 
+            'class' => 'fa-solid fa-file-signature', 
+            'type' => 'inmobiliaria'
+        ],
+        'planos_suminsitro_gas' => [
+            'name' => 'Planos de suministro de gas', 
+            'id' => 'planos_suminsitro_gas', 
+            'class' => 'fa-regular fa-map', 
+            'type' => 'inmobiliaria'
+        ],
+        'planos_evacuacion' => [
+            'name' => 'Planos de evacuacion', 
+            'id' => 'planos_evacuacion', 
+            'class' => 'fa-solid fa-person-running', 
+            'type' => 'inmobiliaria'
+        ],
+        'obleas' => [
+            'name' => 'Obleas', 
+            'id' => 'obleas', 
+            'class' => 'fa-solid fa-file-invoice', 
+            'type' => 'inmobiliaria'
+        ],
+        'puesta_a_tierra' => [
+            'name' => 'Medicion de puesta a tierra', 
+            'id' => 'puesta_a_tierra', 
+            'class' => 'fa-solid fa-plug', 
+            'type' => 'inmobiliaria'
+        ],
+        'habilitaciones' => [
+            'name' => 'Habilitaciones', 
+            'id' => 'habilitaciones', 
+            'class' => 'fa-solid fa-file-circle-check', 
+            'type' => 'administracion'
+        ],
+        'informe_factibilidad' => [
+            'name' => 'Informe de factibilida', 
+            'id' => 'informe_factibilidad', 
+            'class' => 'fa-solid fa-paste', 
+            'type' => 'administracion'
+        ],
+        'solicitud_planos' => [
+            'name' => 'Solicitud de planos', 
+            'id' => 'solicitud_planos', 
+            'class' => 'fa-solid fa-clipboard-check', 
+            'type' => 'both'
+        ],
+        'informe dominio' => [
+            'name' => 'Informe de dominio', 
+            'id' => 'informe_dominio', 
+            'class' => 'fa-solid fa-file-lines', 
+            'type' => 'both'
+        ],
+        'subdivision' => [
+            'name' => 'Subdivision', 
+            'id' => 'subdivision', 
+            'class' => 'fa-solid fa-table-cells-large', 
+            'type' => 'administracion'
+        ],
     ];
 }
+
+
+
+
+
+
+
+
+
+

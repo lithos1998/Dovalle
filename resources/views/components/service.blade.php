@@ -1,10 +1,10 @@
 @foreach ($services as $service )
-    @if ($service[3] != $condition)    
+    @if ($service['type'] != $condition)    
         <div class="service">           
-            <a class="icon-div" href="/servicios/{{ $service[1] }}">
-                <i class="{{ $service[2] }}"></i>
+            <a class="icon-div" href="/servicios/{{ $service['id'] }}">
+                <i class="{{ $service['class'] }}"></i>
             </a>
-            <h3>{{ $service[0] }}</h3>
+            <h3>{{ $service['name'] }}</h3>
         </div>
     @endif
 @endforeach

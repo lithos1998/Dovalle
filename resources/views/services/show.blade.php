@@ -5,9 +5,9 @@
     <div class="show-service">
         <div class="service">            
             <div class="icon-div">
-                <i class="{{ $service[2] }}"></i>
+                <i class="{{ $service['class'] }}"></i>
             </div>
-            <h3>{{ $service[0] }}</h3>
+            <h3>{{ $service['name'] }}</h3>
         </div>
     </div>
 @endsection
