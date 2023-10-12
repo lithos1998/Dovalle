@@ -26,8 +26,8 @@ Route::get('/sentMail', function () {
     return redirect('/');
 });
 
-Route::get('/#contact-us-div' , function(){
-    return redirect('/#contact-us-div');
+Route::get('/contacto' , function(){
+    return view('home');
 })->name('home.contact');
 
 Route::post('/sentMail', function (SolicitudPresupuestoRequest $request) {    

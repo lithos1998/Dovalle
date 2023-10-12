@@ -13,7 +13,15 @@ $(document).ready(function(){
     var direccion = $('#direccion');
     var tramite = $('#tramite');
 
-    
+    if(window.location.pathname == '/contacto'){
+        go_contact();
+    }
+
+    function go_contact(){
+        var contact_top = $('#contact-us-div').offset().top;
+        $("html, body").animate({ scrollTop: contact_top }, 600);
+    }
+
     function enableMenu(){
         $('#nav-pc').addClass('d-none');
         $('#nav-mobile').removeClass('d-none');
@@ -149,13 +157,7 @@ $(document).ready(function(){
     $('#Contacto').click(function(e){
         if(window.location.pathname == '/'){
             e.preventDefault();
-            var contact_top = $('#contact-us-div').offset().top;
-    
-            $("html, body").animate({ scrollTop: contact_top }, 600);
-            
-            return false;
-        }else{
-            nav.addClass('fixed_header');
+            go_contact();
         }
     });
 
