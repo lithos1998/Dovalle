@@ -3,9 +3,9 @@
 class Data{
     public static $services = [
         'ley_257' => [
-            'name' => 'Ley 257', 
+            'name' => 'Ley 6116 (Ex ley 257)', 
             'id' => 'ley_257', 
-            'class' => 'fa-solid fa-gavel', 
+            'class' => 'fa-solid fa-hotel', 
             'type' => 'inmobiliaria'
         ],
         'avisos_obra' => [
@@ -53,7 +53,7 @@ class Data{
         'solicitud_planos' => [
             'name' => 'Solicitud de planos', 
             'id' => 'solicitud_planos', 
-            'class' => 'fa-solid fa-clipboard-check', 
+            'class' => 'fa-regular fa-map', 
             'type' => 'both'
         ],
         'informe dominio' => [
@@ -67,6 +67,69 @@ class Data{
             'id' => 'subdivision', 
             'class' => 'fa-solid fa-table-cells-large', 
             'type' => 'administracion'
+        ],
+        'fachadas' => [
+            'name' => 'Mantenimiento de fachadas', 
+            'id' => 'fachadas', 
+            'class' => 'fa-solid fa-building-shield', 
+            'type' => 'administracion'
+        ],
+        'aph' => [
+            'name' => 'Consultas APH', 
+            'id' => 'aph', 
+            'class' => 'fa-solid fa-hospital-user', 
+            'type' => 'administracion'
+        ],
+    ];
+
+    public static $principal_services = [
+        'ley_257' => [
+            'name' => 'Ley 6116 (Ex ley 257)', 
+            'id' => 'ley_257', 
+            'class' => 'fa-solid fa-hotel', 
+            'type' => 'home'
+        ],
+        'habilitaciones' => [
+            'name' => 'Habilitaciones', 
+            'id' => 'habilitaciones', 
+            'class' => 'fa-solid fa-file-circle-check', 
+            'type' => 'home'
+        ],
+        'subdivision' => [
+            'name' => 'Subdivision', 
+            'id' => 'subdivision', 
+            'class' => 'fa-solid fa-table-cells-large', 
+            'type' => 'home'
+        ],
+        'puesta_a_tierra' => [
+            'name' => 'Medicion de puesta a tierra', 
+            'id' => 'puesta_a_tierra', 
+            'class' => 'fa-solid fa-plug', 
+            'type' => 'home'
+        ],
+        'avisos_obra' => [
+            'name' => 'Avisos de obra', 
+            'id' => 'avisos_obra', 
+            'class' => 'fa-solid fa-file-signature', 
+            'type' => 'inmobiliaria'
+        ],
+        'solicitud_planos' => [
+            'name' => 'Solicitud de planos', 
+            'id' => 'solicitud_planos', 
+            'class' => 'fa-regular fa-map', 
+            'type' => 'home'
+        ],
+        'fachadas' => [
+            'name' => 'Mantenimiento de fachadas', 
+            'id' => 'fachadas', 
+            'class' => 'fa-solid fa-building-shield', 
+            'type' => 'home'
+        ],
+        'aph' => [
+            'name' => 'Consultas APH', 
+            'id' => 'aph', 
+            'class' => 'fa-solid fa-hospital-user', 
+            'type' => 'home'
         ],
     ];
 }

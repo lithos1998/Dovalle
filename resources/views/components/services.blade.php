@@ -1,12 +1,8 @@
 <div class="services">
-    <h2>Servicios para administraciones</h2>
+    <h2>Nuestros Servicios</h2>
     <div class="data">
-        <x-service :services="Data::$services" condition="inmobiliaria"/>
+        <x-service :services="Data::$principal_services" condition="check"/>
     </div>
 
-    <h2>Servicios para inmobiliarias</h2>
-
-    <div class="data">
-        <x-service :services="Data::$services" condition="administracion"/>
-    </div>
+    <a class="see-more-services" href="/servicios">Ver todos los servicios</a>
 </div>

@@ -9,9 +9,9 @@
     <img src="/img/logotipo.png">
 
     <div class="data-header">
+        <div><i class="fa-regular fa-envelope"></i> <p>estudiodovalle@gmail.com</p></div>
+        <div><i class="fa-brands fa-whatsapp"></i> <p>11-5977-9954</p></div>
         <div><i class="fa-solid fa-location-dot"></i> <p>Pilar 836, Liniers</p></div>
-        <div><i class="fa-solid fa-envelope"></i> <p>estudiodovalle@gmail.com</p></div>
-        <div><i class="fa-solid fa-phone"></i> <p>11-5977-9954</p></div>
     </div>
 </div>
 
@@ -27,8 +27,10 @@
     </div>
 
     <div class="nav-social">
-        <a href="https://www.facebook.com/nicolas.lavalle.77" target="_blank"><i class="fab fa-facebook-square"></i></a>
-        <a href="https://instagram.com/estudiodovalle?igshid=f8unfj0veppy" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        <a href="https://www.facebook.com/nicolas.lavalle.77" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://instagram.com/estudiodovalle?igshid=f8unfj0veppy" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=+5491159779954&text=Hola%20deseo%20informacion"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:estudiodovalle@gmail.com"><i class="fa-regular fa-envelope"></i></a>
     </div>
 </nav>
 
