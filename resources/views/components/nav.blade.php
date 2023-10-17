@@ -1,6 +1,6 @@
 @php
     $nav_links = [
-        'Inicio' => '/', 'Nosotros' => '', 'Servicios' => '/servicios', 'Referencias' => '', 'Contacto' => '/contacto'
+        'Inicio' => '/', 'Servicios' => '/servicios', 'Referencias' => '', 'Nosotros' => '/nosotros', 'Contacto' => '/contacto'
     ]
 @endphp
 

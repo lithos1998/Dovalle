@@ -302,7 +302,8 @@ body{
 
 /* Contact */
     #contact-us-div{
-        padding-top: 180px;
+        padding-top: 20px;
+        margin: 40px 0px;
     }
 
     .contact-us{
@@ -501,7 +502,7 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 110px;
+        margin-bottom: 40px;
     }
 
     .services h2{
@@ -681,18 +682,46 @@ body{
     }
 
     .about-us h2{
+        margin: 40px 0px;        
+        font-size: 50px;
         color: var(--dark-gray);
-        margin: 40px 0px;
         text-align: center;
-        font-size: 40px;
     }
 
     .about-us p{
+        font-size: 30px;
         color: var(--dark-gray);
         margin: 30px 0px;        
         text-align: center;
+        margin-bottom: 70px !important;
     }
 
+    .about-us p span{
+        font-weight: 600;
+    }
+
+    #about-us{
+        padding-top: 40px;
+    }
+
+    .skills{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .skill{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill i{
+        font-size: 70px;
+        color: var(--dark-gray);
+    }
 /* about us */
 
 

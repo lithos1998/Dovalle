@@ -14,11 +14,15 @@ $(document).ready(function(){
     var tramite = $('#tramite');
 
     if(window.location.pathname == '/contacto'){
-        go_contact();
+        go_section('#contact-us-div');
     }
 
-    function go_contact(){
-        var contact_top = $('#contact-us-div').offset().top;
+    if(window.location.pathname == '/nosotros'){
+        go_section('#about-us');
+    }
+
+    function go_section(section_id){
+        var contact_top = $(section_id).offset().top - 130;
         $("html, body").animate({ scrollTop: contact_top }, 600);
     }
 
@@ -157,7 +161,14 @@ $(document).ready(function(){
     $('#Contacto').click(function(e){
         if(window.location.pathname == '/'){
             e.preventDefault();
-            go_contact();
+            go_section('#contact-us-div');
+        }
+    });
+
+    $('#Nosotros').click(function(e){
+        if(window.location.pathname == '/'){
+            e.preventDefault();
+            go_section('#about-us');
         }
     });
 

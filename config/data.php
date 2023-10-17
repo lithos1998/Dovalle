@@ -132,6 +132,21 @@ class Data{
             'type' => 'home'
         ],
     ];
+
+    public static $skills = [
+        [
+            'icon' => 'fa-solid fa-shield-halved',
+            'title' => 'Seguridad'    
+        ],
+        [
+            'icon' => 'fa-regular fa-comments',
+            'title' => 'Atencion personalizada'
+        ],
+        [
+            'icon' => 'fa-regular fa-handshake',
+            'title' => 'Compromiso'
+        ]
+    ];
 }
 
 

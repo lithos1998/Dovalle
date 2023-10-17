@@ -30,6 +30,10 @@ Route::get('/contacto' , function(){
     return view('home');
 })->name('home.contact');
 
+Route::get('/nosotros' , function(){
+    return view('home');
+})->name('home.nosotros');
+
 Route::post('/sentMail', function (SolicitudPresupuestoRequest $request) {    
     try{
         Mail::to(config('mail.mailto'))->send(new SolicitudPresupuesto($request));  
