@@ -2,7 +2,6 @@
 
 
 @section('content')
-
     @include('components.services')
     
     @include('components.about-us')

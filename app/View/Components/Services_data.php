@@ -4,18 +4,17 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Service extends Component
+class Services_data extends Component
 {
-
-    public $services;
+    public $id;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($services)
+    public function __construct($id)
     {
-        $this->services = $services;
+        $this->id = $id;
     }
 
     /**
@@ -25,6 +24,6 @@ class Service extends Component
      */
     public function render()
     {
-        return view('components.service');
+        return view('components.services_data');
     }
 }

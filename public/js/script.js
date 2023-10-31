@@ -21,6 +21,11 @@ $(document).ready(function(){
         go_section('#about-us');
     }
 
+    if(window.location.pathname == '/referencias'){
+        go_section('#our-references');
+    }
+
+
     function go_section(section_id){
         var contact_top = $(section_id).offset().top - 130;
         $("html, body").animate({ scrollTop: contact_top }, 600);
@@ -169,6 +174,13 @@ $(document).ready(function(){
         if(window.location.pathname == '/'){
             e.preventDefault();
             go_section('#about-us');
+        }
+    });
+
+    $('#Referencias').click(function(e){
+        if(window.location.pathname == '/'){
+            e.preventDefault();
+            go_section('#our-references');
         }
     });
 

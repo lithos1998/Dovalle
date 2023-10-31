@@ -3,10 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
-use Data;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Request as FacadesRequest;
 
 class ServiceController extends Controller
 {
@@ -17,7 +14,9 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        return view('services.index');
+        $services = Service::all();
+        
+        return view('services.index', compact($services, 'services'));
     }
 
     /**
@@ -50,7 +49,7 @@ class ServiceController extends Controller
     public function show($service)
     {
         // get the array data
-        $service = Data::$services[$service];
+        $service = Service::all()[$service];
         
         return view('services.show')->with('service', $service);
     }

@@ -12,4 +12,21 @@
             </div>
         @endforeach
     </div>
+
+    <div id="our-references">
+        <h2>Nuestras referencias</h2>
+
+        <div class="our-references" >
+            @foreach (Data::$references as $reference)
+                <div class="reference">
+                    <div>
+                        <i class="{{ $reference['icon'] }}"></i>
+                        <span>{{ $reference['number'] }}</span>
+                    </div>
+                    <p>{{ $reference['title'] }}</p>
+                </div>
+            @endforeach
+        </div>
+    </div>
+    
 </div>

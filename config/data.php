@@ -45,7 +45,7 @@ class Data{
             'type' => 'administracion'
         ],
         'informe_factibilidad' => [
-            'name' => 'Informe de factibilida', 
+            'name' => 'Informe de factibilidad', 
             'id' => 'informe_factibilidad', 
             'class' => 'fa-solid fa-paste', 
             'type' => 'administracion'
@@ -145,6 +145,29 @@ class Data{
         [
             'icon' => 'fa-regular fa-handshake',
             'title' => 'Compromiso'
+        ]
+    ];
+
+    public static $references = [
+        [
+            'icon' => 'fa-solid fa-stamp',
+            'title' => 'habilitaciones realizadas',
+            'number' => '200'
+        ],
+        [
+            'icon' => 'fa-solid fa-stamp',
+            'title' => 'habilitaciones realizadas',
+            'number' => '200'
+        ],
+        [
+            'icon' => 'fa-solid fa-stamp',
+            'title' => 'habilitaciones realizadas',
+            'number' => '200'
+        ],
+        [
+            'icon' => 'fa-solid fa-stamp',
+            'title' => 'habilitaciones realizadas',
+            'number' => '200'
         ]
     ];
 }
