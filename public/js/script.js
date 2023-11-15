@@ -42,7 +42,7 @@ $(document).ready(function(){
     }
 
     function checkMenu(){
-        if ($(window).width() <= 900) {
+        if ($(window).width() <= 920) {
             enableMenu();            
         }else{
             disableMenu();

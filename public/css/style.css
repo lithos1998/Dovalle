@@ -726,6 +726,7 @@ body{
     .skill i{
         font-size: 70px;
         color: var(--dark-gray);
+        text-shadow: 2px 3px 5px #00000075;
     }
 
 
@@ -847,6 +848,35 @@ body{
 
 
 /* media queries */
+    @media screen and (max-width: 1600px){
+        .services .data .service {
+            width: 320px !important;
+        }
+    }
+
+    @media screen and (max-width: 1500px){
+        .services .data .service {
+            width: 300px !important;
+        }
+        
+        .service h3 {
+            font-size: 22px;
+        }
+
+        .about-us h2{
+            margin-top: 0px !important;
+        }
+
+        .contact-data{
+            flex-direction: column;
+
+        }
+
+        .contact-data div{
+            width: 100%;
+        }
+    }
+
     @media screen and (max-width: 1400px){
         .data-header div i, .data-header div p {
             font-size: 22px;
@@ -855,48 +885,54 @@ body{
         nav div{
             padding: 0px 30px;
         }
+
+        .reference p {
+            font-size: 23px !important;
+        }
+    
+        .reference span {
+            font-size: 60px;
+            
+        }
+
+        .reference i{
+            font-size: 70px;
+        }
+
+        .nav-link{
+            font-size: 20px !important;
+        }
     }
 
     @media screen and (max-width: 1300px){
-        .service i{
-            font-size: 95px;
-        }
-
-        .service i:hover{
-            font-size: 90px;
-        }
 
         .service h3{
             font-size: 26px;
         }
 
-        .contact-data div {
-            font-size: 26px;
-        }
-
-        .form-group:nth-child(1) {
-            grid-column: 1/7;
-        }
-
         .form-group:nth-child(2) {
             grid-column: 1/7;
-            grid-row: 2;
         }
 
-        .form-group:nth-child(3), .form-group:nth-child(4), .form-group:nth-child(5) {
-            grid-row: 3;
+        .form-group:nth-child(3) {
+            grid-column: 1/7;
+            grid-row: 2 !important;
         }
 
-        .form-group:nth-child(6) {
-            grid-row: 4;
+        .form-group:nth-child(4), .form-group:nth-child(5), .form-group:nth-child(6) {
+            grid-row: 3 !important;
         }
 
         .form-group:nth-child(7) {
-            grid-row: 5;
+            grid-row: 4 !important;
+        }
+
+        .form-group:nth-child(8) {
+            grid-row: 5 !important;
         }
 
         .boton-form{
-            grid-row: 6;
+            grid-row: 6 !important;
         }
 
         .contact-data div:nth-child(1){
@@ -905,6 +941,26 @@ body{
 
         .box{
             margin-top: 10px !important;
+        }
+
+        .services .data .service{
+            width: 250px !important;
+        }
+
+        .about-us p{
+            font-size: 27px;
+        }
+
+        .about-us h2{
+            font-size: 44px !important;
+        }
+
+        .our-references{
+            padding-top: 10px !important;
+        }
+
+        .contact-data{
+            justify-content: unset !important;
         }
     }
 
@@ -923,6 +979,18 @@ body{
 
         .budget, .contact-data{
             padding: 0px 30px;            
+        }
+
+        .services .data .service{
+            width: 210px !important;
+        }
+
+        #about-us{
+            margin-top: 0px !important;
+        }
+
+        .reference span{
+            margin-left: 10px !important;
         }
     }
 
@@ -952,12 +1020,43 @@ body{
             font-size: 22px;
         }
         
-        .service i{
-            font-size: 88px;
+        .services .data .service{
+            width: 180px !important;
+        }
+
+        .nav-header .data-header div, .data-header-mobile div{
+            padding: 0px 15px !important;
+        }
+
+        .about-us p{
+            font-size: 24px !important;
+        }
+
+        .reference i {
+            font-size: 60px;
+        }
+
+        .reference span{
+            font-size: 50px;
         }
     }
 
-    @media screen and (max-width: 900px){
+    @media screen and (max-width: 1024px){
+        .services .data .service{
+            width: 185px !important;
+        }
+
+        .main{
+            padding: 0px 50px !important;
+        }
+
+        .nav-link{
+            font-size: 18px !important;
+        }
+
+    }
+
+    @media screen and (max-width: 920px){
         .nav-header .data-header{
             flex-direction: column;
             align-items: self-end;
@@ -967,10 +1066,6 @@ body{
 
         .data-header div i, .data-header div p{
             font-size: 22px;
-        }
-        
-        .services .data .service {
-            width: 200px !important;
         }
 
         .contact-us{
@@ -987,6 +1082,26 @@ body{
 
         #nav-pc{
             display: none;
+        }
+
+        .services .data .service{
+            width: 170px !important;
+        }
+
+        .contact-data{
+            flex-direction: row !important;
+        }
+
+        .contact-data div {
+            width: 50%;
+        }
+
+        .our-references{
+            flex-wrap: wrap;
+        }
+
+        .reference{
+            width: 50% !important;
         }
     }
 
@@ -1010,6 +1125,18 @@ body{
         .main{
             padding: 0px 70px;
         }
+
+        .services .data .service{
+            width: 150px !important;
+        }
+
+        .services{
+            padding-top: 30px !important;
+        }
+
+        .contact-data div{
+            font-size: 20px !important;
+        }
     }
 
     @media screen and (max-width: 800px){
@@ -1020,6 +1147,29 @@ body{
         .contact-us{
             padding-bottom: 0px !important;
         }
+    }
+
+    @media screen and (max-width: 700px){
+        .see-more-services {
+            width: 70% !important;
+        }
+
+        .contact-data{
+            flex-direction: column !important;
+        }
+
+        .contact-data div{
+            width: 100%;
+        }
+
+        .skill p{
+            font-size: 20px !important;
+        }
+
+        .skill i{
+            font-size: 55px !important;
+        }
+
     }
 
     @media screen and (max-width: 600px){
@@ -1071,6 +1221,50 @@ body{
             width: 50%;
             padding: 0px !important;
             justify-content: center;
+        }
+
+        .services .data .service{
+            width: 120px !important;
+            height: 180px !important;
+        }
+
+        .service h3{
+            font-size: 16px !important;
+        }
+
+        .services h2{
+            font-size: 40px !important;
+        }
+
+
+        .form-group:nth-child(3){
+            grid-row: 3 !important;
+        }
+
+        .form-group:nth-child(4){
+            grid-row: 4 !important;
+            grid-column: 1/7 !important;
+        }
+
+        .form-group:nth-child(5) {
+            grid-row: 5 !important;
+            grid-column: 1/7 !important;
+        }
+
+        .form-group:nth-child(6) {
+            grid-row: 6 !important;
+            grid-column: 1/7 !important;
+        }
+
+        .form-group:nth-child(7) {
+            grid-row: 7 !important;
+        }
+        .form-group:nth-child(8) {
+            grid-row: 8 !important;
+        }
+
+        .boton-form{
+            grid-row: 9 !important;
         }
 
     }
@@ -1159,7 +1353,46 @@ body{
             padding: 0px !important;
         }
 
-        
+        .about-us p{
+            font-size: 20px !important;
+        }
+
+        .about-us h2{
+            font-size: 34px !important;
+        }
+
+        .skills{
+            flex-direction: column;
+        }
+
+        .skill p{
+            margin-top: 10px !important;
+            margin-bottom: 30px !important;
+        }
+
+        .about-us p{
+            margin-bottom: 30px !important;
+        }
+
+        .services .data .service{
+            width: 150px !important;
+        }
+
+        nav .nav-social{
+            padding-right: 0px !important;
+        }
+
+        .main{
+            padding: 0px 20px !important;
+        }
+
+        nav .nav-links{
+            padding-left: 0px !important;
+        }
+
+        .reference div{
+            margin-bottom: 10px !important;
+        }
     }
 
     @media screen and (max-width: 440px){
@@ -1170,6 +1403,18 @@ body{
         .address-estudio p, 
         .phone-estudio p{
             font-size: 17px !important;
+        }
+
+        .see-more-services {
+            width: 75% !important;
+        }
+
+        .reference i{
+            font-size: 45px !important;
+        }
+
+        .reference span{
+            font-size: 40px !important;
         }
     }
 
