@@ -551,6 +551,11 @@ body{
         font-size: 30px;
     }
 
+    .service img{
+        box-shadow: 4px 4px 6px #0000006b;
+        border-radius: 10px !important;
+    }
+
     .icon-div{
         display: flex;
         align-items: center;
@@ -875,6 +880,14 @@ body{
         .contact-data div{
             width: 100%;
         }
+
+        .index-services .services .data .service div h3{
+            font-size: 28px;
+        }
+
+        .index-services .services .data .service {
+            width: 80% !important;
+        }
     }
 
     @media screen and (max-width: 1400px){
@@ -962,6 +975,26 @@ body{
         .contact-data{
             justify-content: unset !important;
         }
+
+        .index-services .services .data{
+            align-items: center !important;
+        }
+
+        .index-services .services .data .service {
+            width: 90% !important;
+        }
+
+        .index-services .services .data .service img{
+            height: 250px !important;
+        }
+
+        .index-services .services .data .service div{
+            height: 250px !important;
+        }
+
+        .index-services .services{
+            padding-top: 20px !important;
+        }
     }
 
     @media screen and (max-width: 1200px){
@@ -1039,6 +1072,18 @@ body{
         .reference span{
             font-size: 50px;
         }
+
+        .index-services .services .data .service{
+            margin-bottom: 40px !important;
+        }
+
+        .index-services .services .data .service img{
+            height: 230px !important;
+        }
+
+        .index-services .services .data .service div{
+            height: 230px !important;
+        }
     }
 
     @media screen and (max-width: 1024px){
@@ -1054,6 +1099,13 @@ body{
             font-size: 18px !important;
         }
 
+        .index-services .services .data .service div p{
+            font-size: 16px !important;
+        }
+
+        .index-services .services .data, .index-services .services .data .service{
+            width: 100% !important;
+        }
     }
 
     @media screen and (max-width: 920px){
@@ -1103,6 +1155,24 @@ body{
         .reference{
             width: 50% !important;
         }
+
+        .index-services .services .data .service img{
+            height: 200px !important;
+            width: 300px !important;
+        }
+
+        .index-services .services .data .service div{
+            height: 200px !important;
+        }
+
+        .index-services .services .data .service div h3{
+            font-size: 25px !important;
+            margin-bottom: 14px !important;
+        }
+
+        .services h2{
+            font-size: 35px !important;
+        }
     }
 
     @media screen and (max-width: 800px){
@@ -1137,6 +1207,19 @@ body{
         .contact-data div{
             font-size: 20px !important;
         }
+
+        .index-services .services .data .service div h3{
+            font-size: 22px !important;
+            margin-bottom: 10px !important;
+        }
+
+        .index-services .services .data .service img{
+            width: 250px !important;
+        }
+
+        .index-services .services .data .service div{
+            margin-left: 20px !important;
+        }
     }
 
     @media screen and (max-width: 800px){
@@ -1168,6 +1251,11 @@ body{
 
         .skill i{
             font-size: 55px !important;
+        }
+
+        .index-services .services .data .service img {
+            width: 220px !important;
+            height: 180px !important;
         }
 
     }
@@ -1267,7 +1355,30 @@ body{
             grid-row: 9 !important;
         }
 
+        .index-services .services h2{
+            font-size: 30px !important;
+        }
+
     }
+
+    @media screen and (max-width: 650px){
+        .index-services .services .data .service{
+            flex-direction: column;
+            margin-bottom: 10px !important;
+        }
+
+        .index-services .services .data .service img{
+            width: 300px !important;
+            height: 200px !important;
+            margin-bottom: 25px !important;
+        }
+
+        .index-services .services .data .service div h3{
+            text-align: center !important;
+        }
+
+    }
+
 
     @media screen and (max-width: 500px){
         .data-header div i, .data-header div p{
