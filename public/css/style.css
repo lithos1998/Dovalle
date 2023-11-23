@@ -1377,6 +1377,10 @@ body{
             text-align: center !important;
         }
 
+        .index-services .services .data .service div p{
+            text-align: center !important;
+        }
+
         .index-services .services .data .service div{
             margin-left: 0px !important;
         }
