@@ -19,6 +19,10 @@
         <x-alert :message="session()->get('alert')['message']"></x-alert>
     @endif
 
+    {{-- @php
+        echo $_SERVER['REMOTE_ADDR'];
+    @endphp --}}
+
      <!-- btn volver arriba -->
     <div class="btn-volver-arriba" id="btnVolverArriba">
         <a href="#" class="volver-arriba-a">

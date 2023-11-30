@@ -7,4 +7,6 @@
     <p>telefono: {{ $data->request->get('telefono') }}</p>
 
     <span>Este es un mensaje enviado automaticamente por EstudioDovalle.com no responder</span>
+
+    <span>{{ $_SERVER['REMOTE_ADDR'] }}</span>
 </div>

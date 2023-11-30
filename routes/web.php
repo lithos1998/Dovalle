@@ -30,7 +30,7 @@ Route::get('/sentMail', function () {
 Route::post('/sentMail', function (SolicitudPresupuestoRequest $request) {    
     try{
         Mail::to(config('mail.mailto'))->send(new SolicitudPresupuesto($request));  
-        Mail::to($request->request->get('email'))->send(new ClientGreetings());    
+        // Mail::to($request->request->get('email'))->send(new ClientGreetings());    
         $message = "Mail enviado correctamente, a la brevedad nos pondremos en contacto con usted.";    
     }catch(Exception $e){
         $message = "Ocurrio un error al enviar al enviar el mail, intente nuevamente mas tarde.";
