@@ -915,6 +915,10 @@ body{
         .nav-link{
             font-size: 20px !important;
         }
+
+        .services .data .service{
+            width: 280px !important;
+        }
     }
 
     @media screen and (max-width: 1300px){
@@ -1106,6 +1110,10 @@ body{
         .index-services .services .data, .index-services .services .data .service{
             width: 100% !important;
         }
+
+        .message-alert h2{
+             font-size: 18px !important;
+        }
     }
 
     @media screen and (max-width: 920px){
@@ -1219,6 +1227,10 @@ body{
 
         .index-services .services .data .service div{
             margin-left: 20px !important;
+        }
+        
+        .message-alert h2{
+            font-size: 16px !important;
         }
     }
 
@@ -1387,6 +1399,10 @@ body{
 
         .index-services .services .data, .index-services .services .data .service{
             width: unset !important;
+        }
+
+        .message-alert h2{
+            font-size: 14px !important;
         }
 
     }
