@@ -29,15 +29,17 @@ Route::get('/sentMail', function () {
 
 Route::post('/sentMail', function (SolicitudPresupuestoRequest $request) {    
     try{
-        Mail::to(config('mail.mailto'))->send(new SolicitudPresupuesto($request));  
-        // Mail::to($request->request->get('email'))->send(new ClientGreetings());    
+        if(isBot($request) == false){
+            Mail::to(config('mail.mailto'))->send(new SolicitudPresupuesto($request));  
+            // Mail::to($request->request->get('email'))->send(new ClientGreetings());    
+        }
         $message = "Mail enviado correctamente, a la brevedad nos pondremos en contacto con usted.";    
     }catch(Exception $e){
         $message = "Ocurrio un error al enviar al enviar el mail, intente nuevamente mas tarde.";
     }
-
+    
     session()->flash('alert', ['message'=> $message]);
-
+    
     return redirect('/');
 });
 
@@ -47,3 +49,14 @@ Route::get('/servicios', [ServiceController::class, 'index'])->name('services.in
 Route::get('/get-services', function () {
     return new ServiceCollection(Service::all());
 });
+
+
+function isBot($data){
+    $check = false;
+    
+    if($data["nombre"] == $data["direccion"] || $data["nombre"] == $data["tramite"] || $data["direccion"] == $data["tramite"]){
+          $check = true;
+    }
+
+    return $check;
+}

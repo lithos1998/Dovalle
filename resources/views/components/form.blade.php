@@ -19,7 +19,7 @@
 
                 <div class="form-group">
                     <label for="inputTelefono">Telefono *</label>
-                    <input type="text" class="form-control" name="telefono" id="telefono" placeholder=" Ej. 49428484">
+                    <input type="number" class="form-control" name="telefono" id="telefono" placeholder=" Ej. 49428484">
                     <span class="input-error">{{ $errors->first('telefono') }}</span>
                 </div>
 
@@ -31,7 +31,7 @@
 
                 <div class="form-group">
                     <label for="inputM2">M2 *</label>
-                    <input type="text" class="form-control" name="m2" id="m2" placeholder=" Ej. 200m2">
+                    <input type="number" class="form-control" name="m2" id="m2" placeholder=" Ej. 200">
                     <span class="input-error">{{ $errors->first('m2') }}</span>
                 </div>
                 

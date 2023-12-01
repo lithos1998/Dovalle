@@ -27,7 +27,7 @@ class SolicitudPresupuestoRequest extends FormRequest
         return [
             'nombre'=>'required',
             'email'=>'required|email',
-            'telefono'=>'required',
+            'telefono'=>'required|integer',
             'rubro'=>'required',
             'm2'=>'required',
             'direccion'=>'required',
@@ -48,3 +48,13 @@ class SolicitudPresupuestoRequest extends FormRequest
         ];
     }
 }
+
+// return [
+//     'nombre'=>'required',
+//     'email'=>'required|email',
+//     'telefono'=>'required|integer|size:10',
+//     'rubro'=>'required',
+//     'm2'=>'required|size:8',
+//     'direccion'=>'required',
+//     'tramite'=>'required'
+// ];
