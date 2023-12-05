@@ -152,22 +152,22 @@ class Data{
         [
             'icon' => 'fa-solid fa-stamp',
             'title' => 'habilitaciones realizadas',
-            'number' => '200'
+            'number' => '162'
         ],
         [
-            'icon' => 'fa-solid fa-stamp',
-            'title' => 'habilitaciones realizadas',
-            'number' => '200'
+            'icon' => 'fa-solid fa-circle-check',
+            'title' => 'solicitudes aprovadas',
+            'number' => '245'
         ],
         [
-            'icon' => 'fa-solid fa-stamp',
-            'title' => 'habilitaciones realizadas',
-            'number' => '200'
+            'icon' => 'fa-regular fa-map',
+            'title' => 'planos realizados',
+            'number' => '388'
         ],
         [
-            'icon' => 'fa-solid fa-stamp',
-            'title' => 'habilitaciones realizadas',
-            'number' => '200'
+            'icon' => 'fa-solid fa-helmet-safety',
+            'title' => 'trabajos realizados',
+            'number' => '259'
         ]
     ];
 }

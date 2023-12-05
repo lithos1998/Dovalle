@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2023 at 08:30 PM
+-- Generation Time: Dec 05, 2023 at 07:40 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -114,11 +114,11 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(52, '2019_08_19_000000_create_failed_jobs_table', 1),
-(53, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(54, '2023_10_18_181511_create_services_table', 1),
-(55, '2023_10_18_182242_create_categories_table', 1),
-(56, '2023_10_19_002114_create_category_service_table', 1);
+(3, '2019_08_19_000000_create_failed_jobs_table', 1),
+(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(5, '2023_10_18_181511_create_services_table', 1),
+(6, '2023_10_18_182242_create_categories_table', 1),
+(7, '2023_10_19_002114_create_category_service_table', 1);
 
 -- --------------------------------------------------------
 
@@ -150,7 +150,7 @@ CREATE TABLE `services` (
   `id_name` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `icon` varchar(255) NOT NULL,
-  `description` longtext NOT NULL,
+  `description` text NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -159,24 +159,24 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`service_id`, `id_name`, `name`, `icon`, `description`, `image`) VALUES
-(1, 'ley_257', 'Ley 6116 (Ex ley 257)', 'fa-solid fa-hotel', 'Facilitamos tu cumplimiento con la Ley 6116. Nuestro servicio se encarga eficientemente de todos los trámites necesarios, asegurando conformidad legal. Desde documentación hasta procesos administrativos, nos ocupamos para que puedas centrarte en tu actividad principal. Confía en nosotros para simplificar y agilizar el cumplimiento normativo', 'default'),
-(2, 'avisos_obra', 'Avisos de obra', 'fa-solid fa-file-signature', 'Simplificamos tu proceso constructivo y nos encargamos de notificar y coordinar eficientemente cada fase del proyecto, manteniéndote informado en tiempo real. Desde permisos hasta hitos cruciales, estamos aquí para que tu obra avance sin contratiempos. Confía en nosotros para una gestión de proyectos fluida', 'default'),
-(3, 'planos_suminsitro_gas', 'Planos de suministro de gas', 'fa-regular fa-map', 'Ofrecemos un servicio especializado en la creación de planos para el suministro de gas, asegurando instalaciones seguras y eficientes. Nuestro equipo de expertos elabora detallados diseños, cumpliendo con normativas y garantizando la optimización del sistema. Confía en nosotros para asegurar un suministro de gas confiable y adaptado a tus necesidades', 'default'),
-(4, 'planos_evacuacion', 'Planos de evacuacion', 'fa-solid fa-person-running', 'Ofrecemos un servicio especializado en la creación de planos de evacuación. Nuestros expertos diseñan mapas detallados, cumpliendo normativas de seguridad y facilitando la rápida evacuación en situaciones críticas. Confía en nosotros para garantizar entornos seguros y cumplir con los requisitos legales', 'default'),
-(5, 'obleas', 'Obleas', 'fa-solid fa-file-invoice', '', 'default'),
-(6, 'puesta_a_tierra', 'Medicion de puesta a tierra', 'fa-solid fa-plug', 'Proporcionamos servicios de medición de puesta a tierra para garantizar la seguridad eléctrica. Nuestro equipo especializado utiliza tecnología avanzada para evaluar la eficiencia del sistema de conexión a tierra, identificando posibles riesgos. Confía en nosotros para asegurar un entorno eléctrico seguro y cumplir con normativas.', 'default'),
-(7, 'informe_factibilidad', 'Informe de factibilidad', 'fa-solid fa-paste', 'frecemos servicios de informes de factibilidad para evaluar la viabilidad de tus proyectos. Nuestro equipo experto analiza minuciosamente aspectos financieros, técnicos y operativos, proporcionándote datos clave. Confía en nosotros para tomar decisiones informadas y garantizar el éxito de tus iniciativas empresariales.', 'default'),
-(8, 'solicitud_planos', 'Solicitud de planos', 'fa-regular fa-map', 'Facilitamos la solicitud de planos con nuestro servicio especializado. Gestionamos eficientemente la documentación necesaria, garantizando procesos sin complicaciones. Ya sea para proyectos residenciales o comerciales, confía en nosotros para agilizar el proceso y obtener los planos que necesitas de manera rápida y precisa.', 'default'),
-(9, 'informe_dominio', 'Informe de dominio', 'fa-solid fa-file-lines', 'Ofrecemos servicios de informes de dominio para proporcionarte información detallada sobre propiedades. Nuestro equipo realiza exhaustivas investigaciones legales y registrales, asegurando transparencia en la compra o venta. Confía en nosotros para obtener informes precisos que respalden tus decisiones inmobiliarias con seguridad y confianza.', 'default'),
-(10, 'subdivision', 'Subdivision', 'fa-solid fa-table-cells-large', 'Facilitamos subdivisiones de terreno con nuestro servicio especializado. Nuestro equipo experto gestiona todos los aspectos del proceso, desde la planificación hasta la aprobación, garantizando una subdivisión eficiente y legalmente sólida. Confía en nosotros para maximizar el valor de tu propiedad con subdivisiones bien ejecutadas.', 'default'),
-(11, 'fachadas', 'Mantenimiento de fachadas', 'fa-solid fa-building-shield', 'Ofrecemos servicios especializados en el mantenimiento de fachadas, garantizando la preservación y estética de edificios. Nuestro equipo experto realiza inspecciones, reparaciones y limpiezas, asegurando la integridad estructural y visual. Confía en nosotros para mantener la apariencia y funcionalidad de tus fachadas con soluciones eficientes y de calidad.', 'default'),
-(12, 'aph', 'Consultas APH', 'fa-solid fa-hospital-user', 'Ofrecemos servicios especializados en consultas de Análisis Preliminar de Riesgos (APH). Nuestro equipo experto evalúa y asesora sobre los riesgos laborales, garantizando entornos de trabajo seguros. Confía en nosotros para cumplir con normativas, prevenir accidentes y promover la seguridad laboral en tu empresa.', 'default'),
-(13, 'medianeras', 'Impermeabilizacion de medianeras', 'fa-solid fa-droplet-slash', 'Especializados en impermeabilización de medianeras, ofrecemos soluciones efectivas para proteger tu edificio contra filtraciones y humedades. Nuestro equipo realiza evaluaciones detalladas y aplica técnicas avanzadas, garantizando una barrera duradera contra los elementos. Confía en nosotros para mantener tus medianeras secas y estructuralmente sólidas', 'default'),
-(14, 'azoteas', 'Impermeabilizacion de azoteas', 'fa-solid fa-droplet-slash', 'Destacamos en la impermeabilización de azoteas, protegiendo tu edificio contra filtraciones y daños causados por el clima. Nuestro servicio utiliza tecnologías avanzadas y materiales duraderos, asegurando una impermeabilización efectiva y duradera. Confía en nosotros para mantener tu azotea seca y protegida, prolongando la vida útil de tu estructura.', 'default'),
-(15, 'municipales', 'Habilitaciones municipales', 'fa-solid fa-file-signature', 'Facilitamos las habilitaciones municipales con nuestro servicio especializado. Gestionamos eficientemente todos los trámites necesarios, asegurando la conformidad con normativas locales. Ya sea para proyectos comerciales o residenciales, confía en nosotros para agilizar el proceso y obtener las habilitaciones municipales que necesitas de manera rápida y precisa.', 'default'),
-(16, 'carteleria', 'Habilitaciones de carteleria, marquecina y toldos', 'fa-solid fa-sign-hanging', 'Facilitamos las habilitaciones de cartelería, marquesinas y toldos con nuestro servicio especializado. Gestionamos eficientemente todos los trámites necesarios, asegurando la conformidad con regulaciones locales. Ya sea para negocios o residencias, confía en nosotros para agilizar el proceso y obtener las habilitaciones que necesitas de manera rápida y precisa.', 'default'),
-(17, 'vereda', 'Habilitacion de espacio publico en vereda', 'fa-solid fa-road', 'Simplificamos la habilitación de espacios públicos en veredas con nuestro servicio especializado. Nos encargamos eficientemente de los trámites, garantizando la conformidad con regulaciones locales. Ya sea para comercios o proyectos urbanos, confía en nosotros para agilizar el proceso y obtener la habilitación necesaria de manera rápida y precisa.', 'default'),
-(18, 'emplazamiento', 'Habilitacion de permiso de emplazamiento', 'fa-solid fa-up-right-and-down-left-from-center', 'Ofrecemos servicios especializados en la habilitación de permisos de emplazamiento, asegurando la conformidad con regulaciones locales. Gestionamos eficientemente todos los trámites necesarios para posicionar tus proyectos comerciales o residenciales de manera legal y efectiva. Confía en nosotros para agilizar el proceso y obtener los permisos de emplazamiento necesarios de manera rápida y precisa.', 'default');
+(1, 'ley_257', 'Ley 6116 (Ex ley 257)', 'fa-solid fa-hotel', 'Facilitamos tu cumplimiento con la Ley 6116. Nuestro servicio se encarga eficientemente de todos los trámites necesarios, asegurando conformidad legal. Desde documentación hasta procesos administrativos, nos ocupamos para que puedas centrarte en tu actividad principal. Confía en nosotros para simplificar y agilizar el cumplimiento normativo', 'ley_257'),
+(2, 'avisos_obra', 'Avisos de obra', 'fa-solid fa-file-signature', 'Simplificamos tu proceso constructivo y nos encargamos de notificar y coordinar eficientemente cada fase del proyecto, manteniéndote informado en tiempo real. Desde permisos hasta hitos cruciales, estamos aquí para que tu obra avance sin contratiempos. Confía en nosotros para una gestión de proyectos fluida', 'avisos_obra'),
+(3, 'planos_suminisitro_gas', 'Planos de suministro de gas', 'fa-regular fa-map', 'Ofrecemos un servicio especializado en la creación de planos para el suministro de gas, asegurando instalaciones seguras y eficientes. Nuestro equipo de expertos elabora detallados diseños, cumpliendo con normativas y garantizando la optimización del sistema. Confía en nosotros para asegurar un suministro de gas confiable y adaptado a tus necesidades', 'planos_suminisitro_gas'),
+(4, 'planos_evacuacion', 'Planos de evacuacion', 'fa-solid fa-person-running', 'Ofrecemos un servicio especializado en la creación de planos de evacuación. Nuestros expertos diseñan mapas detallados, cumpliendo normativas de seguridad y facilitando la rápida evacuación en situaciones críticas. Confía en nosotros para garantizar entornos seguros y cumplir con los requisitos legales', 'planos_evacuacion'),
+(5, 'obleas', 'Obleas', 'fa-solid fa-file-invoice', 'Nos especializamos en la emisión de obleas para ascensores, garantizando la conformidad con normativas de seguridad. Nuestro servicio gestiona eficientemente todos los trámites necesarios, asegurando la operación segura y legal de los ascensores. Confía en nosotros para obtener obleas de ascensores de manera rápida y precisa.', 'obleas'),
+(6, 'puesta_a_tierra', 'Medicion de puesta a tierra', 'fa-solid fa-plug', 'Proporcionamos servicios de medición de puesta a tierra para garantizar la seguridad eléctrica. Nuestro equipo especializado utiliza tecnología avanzada para evaluar la eficiencia del sistema de conexión a tierra, identificando posibles riesgos. Confía en nosotros para asegurar un entorno eléctrico seguro y cumplir con normativas.', 'puesta_a_tierra'),
+(7, 'informe_factibilidad', 'Informe de factibilidad', 'fa-solid fa-paste', 'frecemos servicios de informes de factibilidad para evaluar la viabilidad de tus proyectos. Nuestro equipo experto analiza minuciosamente aspectos financieros, técnicos y operativos, proporcionándote datos clave. Confía en nosotros para tomar decisiones informadas y garantizar el éxito de tus iniciativas empresariales.', 'informe_factibilidad'),
+(8, 'solicitud_planos', 'Solicitud de planos', 'fa-regular fa-map', 'Facilitamos la solicitud de planos con nuestro servicio especializado. Gestionamos eficientemente la documentación necesaria, garantizando procesos sin complicaciones. Ya sea para proyectos residenciales o comerciales, confía en nosotros para agilizar el proceso y obtener los planos que necesitas de manera rápida y precisa.', 'solicitud_plano'),
+(9, 'informe_dominio', 'Informe de dominio', 'fa-solid fa-file-lines', 'Ofrecemos servicios de informes de dominio para proporcionarte información detallada sobre propiedades. Nuestro equipo realiza exhaustivas investigaciones legales y registrales, asegurando transparencia en la compra o venta. Confía en nosotros para obtener informes precisos que respalden tus decisiones inmobiliarias con seguridad y confianza.', 'informe_dominio'),
+(10, 'subdivision', 'Subdivision', 'fa-solid fa-table-cells-large', 'Facilitamos subdivisiones de terreno con nuestro servicio especializado. Nuestro equipo experto gestiona todos los aspectos del proceso, desde la planificación hasta la aprobación, garantizando una subdivisión eficiente y legalmente sólida. Confía en nosotros para maximizar el valor de tu propiedad con subdivisiones bien ejecutadas.', 'subdivision'),
+(11, 'fachadas', 'Mantenimiento de fachadas', 'fa-solid fa-building-shield', 'Ofrecemos servicios especializados en el mantenimiento de fachadas, garantizando la preservación y estética de edificios. Nuestro equipo experto realiza inspecciones, reparaciones y limpiezas, asegurando la integridad estructural y visual. Confía en nosotros para mantener la apariencia y funcionalidad de tus fachadas con soluciones eficientes y de calidad.', 'fachadas'),
+(12, 'aph', 'Consultas APH', 'fa-solid fa-hospital-user', 'Ofrecemos servicios especializados en consultas de Análisis Preliminar de Riesgos (APH). Nuestro equipo experto evalúa y asesora sobre los riesgos laborales, garantizando entornos de trabajo seguros. Confía en nosotros para cumplir con normativas, prevenir accidentes y promover la seguridad laboral en tu empresa.', 'aph'),
+(13, 'medianeras', 'Inpermeabilizacion de medianeras', 'fa-solid fa-droplet-slash', 'Especializados en impermeabilización de medianeras, ofrecemos soluciones efectivas para proteger tu edificio contra filtraciones y humedades. Nuestro equipo realiza evaluaciones detalladas y aplica técnicas avanzadas, garantizando una barrera duradera contra los elementos. Confía en nosotros para mantener tus medianeras secas y estructuralmente sólidas', 'medianeras'),
+(14, 'azoteas', 'Inpermeabilizacion de azoteas', 'fa-solid fa-droplet-slash', 'Destacamos en la impermeabilización de azoteas, protegiendo tu edificio contra filtraciones y daños causados por el clima. Nuestro servicio utiliza tecnologías avanzadas y materiales duraderos, asegurando una impermeabilización efectiva y duradera. Confía en nosotros para mantener tu azotea seca y protegida, prolongando la vida útil de tu estructura.', 'azoteas'),
+(15, 'municipales', 'Habilitaciones municipales', 'fa-solid fa-file-signature', 'Facilitamos las habilitaciones municipales con nuestro servicio especializado. Gestionamos eficientemente todos los trámites necesarios, asegurando la conformidad con normativas locales. Ya sea para proyectos comerciales o residenciales, confía en nosotros para agilizar el proceso y obtener las habilitaciones municipales que necesitas de manera rápida y precisa.', 'municipales'),
+(16, 'carteleria', 'Habilitaciones de carteleria, marquecina y toldos', 'fa-solid fa-sign-hanging', 'Facilitamos las habilitaciones de cartelería, marquesinas y toldos con nuestro servicio especializado. Gestionamos eficientemente todos los trámites necesarios, asegurando la conformidad con regulaciones locales. Ya sea para negocios o residencias, confía en nosotros para agilizar el proceso y obtener las habilitaciones que necesitas de manera rápida y precisa.', 'carteleria'),
+(17, 'vereda', 'Habilitacion de espacio publico en vereda', 'fa-solid fa-road', 'Simplificamos la habilitación de espacios públicos en veredas con nuestro servicio especializado. Nos encargamos eficientemente de los trámites, garantizando la conformidad con regulaciones locales. Ya sea para comercios o proyectos urbanos, confía en nosotros para agilizar el proceso y obtener la habilitación necesaria de manera rápida y precisa.', 'vereda'),
+(18, 'emplazamiento', 'Habilitacion de permiso de emplazamiento', 'fa-solid fa-up-right-and-down-left-from-center', 'Ofrecemos servicios especializados en la habilitación de permisos de emplazamiento, asegurando la conformidad con regulaciones locales. Gestionamos eficientemente todos los trámites necesarios para posicionar tus proyectos comerciales o residenciales de manera legal y efectiva. Confía en nosotros para agilizar el proceso y obtener los permisos de emplazamiento necesarios de manera rápida y precisa.', 'vereda');
 
 --
 -- Indexes for dumped tables
@@ -247,7 +247,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`

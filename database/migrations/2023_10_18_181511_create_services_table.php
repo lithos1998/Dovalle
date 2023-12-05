@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('id_name');
             $table->string('name');
             $table->string('icon');
-            $table->string('description');
+            $table->text('description', 1024);
             $table->string('image');
         });
     }
