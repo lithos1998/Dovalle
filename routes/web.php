@@ -46,6 +46,8 @@ Route::post('/sentMail', function (SolicitudPresupuestoRequest $request) {
 Route::get('/servicios', [ServiceController::class, 'index'])->name('services.index');
 // Route::get('/servicios/{service}', [ServiceController::class, 'index'])->name('services.index');
 
+
+// vieja ruta api ----- borrar
 Route::get('/get-services', function () {
     return new ServiceCollection(Service::all());
 });

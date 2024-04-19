@@ -39,21 +39,19 @@
     --main-black : #000000;
     --main-gray : #666666;
 
-    --green : #128C7E;
     --dark-gray : #4b4b4b;
     --light-gray : #7d7d7d;
     --white-gray : #959393;
     --second-color : #587679;
     --second-color-main: #71979b ;
-    /* test color */
+    --gray-blue:#455671;
+    --main-blue: #276aa1;
+    --dark-blue: #45647F;
 
-    /* 
-        #2c5a71
-        #c23232
-        #509b4e
-        #607b7d
-        #3c6e71
-    */
+
+    /* --background: #fff3b0; */
+    --background: #f1f3f4;
+    
 
     /* fonts */
     --montserrat : 'montserrat';
@@ -63,15 +61,23 @@
     --roboto-medium : 'roboto-medium';
     --roboto-bold : 'roboto-bold';
     --roboto-black : 'roboto-black';
+    --tilt-neon: 'Tilt Neon';
+    --titles: 'Lobster';
 }
 
 body{
-    background-color: var(--main-white);
+    background-color: var(--background);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.872);
 }
 
 .main{
     width: 100%;
-    padding: 0px 100px;
+    padding: 0px 0px;
+}
+
+.container{
+    width: 100%;
+    padding: 0px 100px !important;
 }
 
 *{
@@ -88,7 +94,15 @@ h1{
     font-family: var(--roboto-black);
 }
 
-h2, h3, h4, h5{
+h3, h4, h5{
+    font-family: var(--roboto-bold);
+}
+
+h2{
+    font-family: var(--titles);
+}
+
+.budget h2{
     font-family: var(--roboto-bold);
 }
 
@@ -133,12 +147,12 @@ body{
         font-size: 50px;
         cursor: pointer;
         transition: all .3s ease;
-        color: var(--green);
+        color: var(--main-blue);
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
     .btn-volver-arriba a i:hover{
         font-size: 65px;
-        color: #075E54;
+        color: var(--dark-blue);
     }
 
 /* boton wpp */
@@ -179,8 +193,8 @@ body{
         display: flex;
         flex-direction: row;
         width: 100%;
-        height: 150px;
-        background-color: var(--main-white);
+        height: fit-content;
+        background-color: transparent;
         align-items: center;
         justify-content: space-between;
     }
@@ -210,22 +224,21 @@ body{
     .data-header div p, 
     .data-header-mobile div i, 
     .data-header-mobile div p{
-        font-size: 22px;
+        font-size: 25px;
         color: var(--dark-gray);
     }
 
     .nav-header img{
-        padding: 0px 30px;
-        height: 100%;
+        padding: 15px 30px;
+        height: 135px;
     }
 
     nav{
         position: relative;
         z-index: 100;
         width: 100%;
-        height: 80px;
-        /* background-color: var(--dark-gray); */
-        background-color: var(--main-gray);
+        height: 50px;
+        background-color: #276aa1;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -247,14 +260,15 @@ body{
     
     .nav-link{
         padding: 0px 20px;
-        font-size: 24px;
-        font-family: var(--roboto-light);
+        font-size: 25px;
+        font-family: var(--tilt-neon);
         transition: all .4s ease-in-out;
+        color: var(--background);
     }
 
     .nav-link:hover{
         font-weight: 800;
-        color: var(--second-color-main);
+        color: var(--main-white);
     }
 
     nav .nav-social{
@@ -265,13 +279,14 @@ body{
 
     nav .nav-social a{
         padding: 0px 10px;
-        font-size: 30px;
+        font-size: 25px;
+        text-shadow: 6px 6px 11px rgba(0, 0, 0, 0.7);
         transition: all .3s ease-in-out;
     }
 
     nav .nav-social a:hover{
-        font-size: 32px;
-        text-shadow: 6px 6px 11px rgba(0, 0, 0, 0.7);
+        color: var(--background);
+        text-shadow: unset !important;
     }
 
     .fixed_header{
@@ -307,7 +322,8 @@ body{
     }
 
     .contact-us{
-        padding: 50px 0px;
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
         width: 100%;
         height: 100%;
         display: flex;
@@ -372,7 +388,7 @@ body{
 
     .form-group input:focus{
         outline: none !important;
-        border-color: var(--green);
+        border-color: var(--main-blue);
     }
     
     input:-webkit-autofill,
@@ -446,20 +462,22 @@ body{
         cursor: pointer;
         font-family: var(--roboto-medium);
         font-size: 20px;
-        background-color: var(--second-color);
+        background-color: var(--main-blue);
         color: var(--main-white);
-        box-shadow: 4px 5px 8   px #00000086;
+        box-shadow: 4px 5px 8px #00000086;
         transition: all .4s ease-in-out;
     }
 
     .boton-form:hover{
-        box-shadow: 4px 5px 8px #000000ab;
-        background-color: var(--second-color-main);
-        box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.479);
+        background-color: var(--background);
+        color: var(--main-blue);
+        box-shadow: unset;
     }
 
     #mapa{
         margin-top: 40px;
+        width: 100%;
+        border-radius: 15px;
     }
 
     .contact-data{
@@ -495,8 +513,7 @@ body{
 
 /* services */
     .services{
-        background-color: var(--main-white);
-        /* margin: 90px 0px; */
+        margin: 90px 0px;
         padding-top: 90px;
         width: 100%;
         display: flex;
@@ -522,7 +539,7 @@ body{
 
     .services .data .service{
         margin: 20px 0px;
-        width: 350px !important;
+        width: 450px !important;
         height: 200px !important;
         display: flex;
         flex-direction: column;
@@ -530,7 +547,7 @@ body{
     }
 
     .service i{
-        color: var(--second-color);
+        color: var(--dark-gray);
         font-size: 70px;
         margin-bottom: 15px;
         transition: all .3s ease-in-out;
@@ -539,7 +556,7 @@ body{
     }
 
     .service i:hover{
-        color: var(--second-color-main);
+        color: var(--main-blue);
         font-size: 85px;
         text-shadow: none;
     }
@@ -571,13 +588,15 @@ body{
         width: 40%;
         color: var(--main-white);
         text-align: center;
-        background-color: var(--green);
+        background-color: var(--main-blue);
         font-family: var(--roboto-light);
         transition: all .3s ease-in-out;
+        box-shadow: 2px 4px 10px #00000090;
     }
 
     .see-more-services:hover{
-       background-color: #075E54;
+       background-color: var(--dark-gray);
+       box-shadow: unset;
     }
 
     /* services index */
@@ -687,11 +706,20 @@ body{
 
 /* about us */
     .about-us{
-        margin: 40px 0px;
+        margin: 50px 0px;
+        padding-top: 40px !important;
         width: 100%;
+        background-color: var(--main-blue) !important;
     }
 
     .about-us h2{
+        margin: 40px 0px;        
+        font-size: 50px;
+        color: var(--background);
+        text-align: center;
+    }
+
+    .references h2{
         margin: 40px 0px;        
         font-size: 50px;
         color: var(--dark-gray);
@@ -699,8 +727,8 @@ body{
     }
 
     .about-us p{
-        font-size: 30px;
-        color: var(--dark-gray);
+        font-size: 25px;
+        color: var(--background);
         margin: 30px 0px;        
         text-align: center;
         margin-bottom: 70px !important;
@@ -708,6 +736,11 @@ body{
 
     .about-us p span{
         font-weight: 600;
+    }
+
+    .skill p,
+    .reference p{
+        font-size: 30px;
     }
 
     #about-us{
@@ -730,7 +763,7 @@ body{
 
     .skill i{
         font-size: 70px;
-        color: var(--dark-gray);
+        color: var(--background);
         text-shadow: 2px 3px 5px #00000075;
     }
 
@@ -763,7 +796,6 @@ body{
 
     .reference p{
         margin-top: 0px;
-        font-size: 25px;
         color: var(--dark-gray);
     }
 /* about us */
@@ -965,7 +997,7 @@ body{
         }
 
         .about-us p{
-            font-size: 27px;
+            font-size: 23px;
         }
 
         .about-us h2{
@@ -1066,7 +1098,7 @@ body{
         }
 
         .about-us p{
-            font-size: 24px !important;
+            font-size: 21px !important;
         }
 
         .reference i {
@@ -1095,7 +1127,7 @@ body{
             width: 185px !important;
         }
 
-        .main{
+        .container{
             padding: 0px 50px !important;
         }
 
@@ -1200,7 +1232,7 @@ body{
             font-size: 20px;
         }
 
-        .main{
+        .container{
             padding: 0px 70px;
         }
 
@@ -1282,7 +1314,7 @@ body{
             padding-right: 15px;
         }
 
-        .main{
+        .container{
             padding: 0px 40px;
         }
 
@@ -1476,7 +1508,7 @@ body{
             justify-content: center;
         }
 
-        .main{
+        .container{
             padding: 0px 25px;
         }
 
@@ -1521,7 +1553,7 @@ body{
             padding-right: 0px !important;
         }
 
-        .main{
+        .container{
             padding: 0px 20px !important;
         }
 

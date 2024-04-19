@@ -9,7 +9,7 @@ class Data{
             'type' => 'inmobiliaria'
         ],
         'avisos_obra' => [
-            'name' => 'Avisos de obra', 
+            'name' => 'Permisos y avisos de obra', 
             'id' => 'avisos_obra', 
             'class' => 'fa-solid fa-file-signature', 
             'type' => 'inmobiliaria'
@@ -35,13 +35,13 @@ class Data{
         'puesta_a_tierra' => [
             'name' => 'Medicion de puesta a tierra', 
             'id' => 'puesta_a_tierra', 
-            'class' => 'fa-solid fa-plug', 
+            'class' => 'fa-solid fa-bolt-lightning', 
             'type' => 'inmobiliaria'
         ],
         'habilitaciones' => [
             'name' => 'Habilitaciones', 
             'id' => 'habilitaciones', 
-            'class' => 'fa-solid fa-file-circle-check', 
+            'class' => 'fa-regular fa-calendar-check', 
             'type' => 'administracion'
         ],
         'informe_factibilidad' => [
@@ -71,13 +71,13 @@ class Data{
         'fachadas' => [
             'name' => 'Mantenimiento de fachadas', 
             'id' => 'fachadas', 
-            'class' => 'fa-solid fa-building-shield', 
+            'class' => 'fa-solid fa-person-digging', 
             'type' => 'administracion'
         ],
         'aph' => [
-            'name' => 'Consultas APH', 
+            'name' => 'Habilitaciones comerciales', 
             'id' => 'aph', 
-            'class' => 'fa-solid fa-hospital-user', 
+            'class' => 'fa-solid fa-building-circle-check', 
             'type' => 'administracion'
         ],
     ];
@@ -145,6 +145,10 @@ class Data{
         [
             'icon' => 'fa-regular fa-handshake',
             'title' => 'Compromiso'
+        ],
+        [
+            'icon' => 'fa-solid fa-user-tie',
+            'title' => 'Profesionalismo'
         ]
     ];
 
@@ -152,22 +156,22 @@ class Data{
         [
             'icon' => 'fa-solid fa-stamp',
             'title' => 'habilitaciones realizadas',
-            'number' => '162'
+            'number' => '373'
         ],
         [
             'icon' => 'fa-solid fa-circle-check',
-            'title' => 'solicitudes aprovadas',
-            'number' => '245'
+            'title' => 'informes realizados',
+            'number' => '1893'
         ],
         [
             'icon' => 'fa-regular fa-map',
-            'title' => 'planos realizados',
-            'number' => '388'
+            'title' => 'gestiones realizadas',
+            'number' => '582'
         ],
         [
             'icon' => 'fa-solid fa-helmet-safety',
             'title' => 'trabajos realizados',
-            'number' => '259'
+            'number' => '53'
         ]
     ];
 }

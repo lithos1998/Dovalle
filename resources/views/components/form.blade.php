@@ -1,5 +1,5 @@
 <div id="contact-us-div">
-    <div class="contact-us" id="contact-us">    
+    <div class="contact-us container" id="contact-us">    
         <div class="budget">
             <h2>Solicita tu presupuesto aqui</h2>
             <form id="budget-form" class="budget-form" action="/sentMail" enctype="multipart/form-data" method="POST">
@@ -57,9 +57,10 @@
             <div><div class="box"><i class="fa-brands fa-whatsapp"></i></div> <p>11-5977-9954</p></div>
             <div><div class="box"><i class="fa-brands fa-facebook"></i></div> <p>EstudioDovalle Srl</p></div>
             <div><div class="box"><i class="fa-brands fa-instagram"></i></div> <p>@estudiodovalle</p></div>
-            <div><div class="box"><i class="fa-solid fa-location-dot"></i></div> <p>Pilar 836, Liniers</p></div>
+            <div><div class="box"><i class="fa-solid fa-location-dot"></i></div> <p>Av. Corrientes 2565 3º 4</p></div>
         
-            <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.2573092721927!2d-58.51974722467467!3d-34.64820415984828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc851b2a7222f%3A0x313f4203aa3a4059!2sPilar%20836%2C%20C1408%20CABA!5e0!3m2!1ses!2sar!4v1693251378598!5m2!1ses!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe id="mapa" src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376.4275724969588!2d-58.40324159481736!3d-34.60473912207922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaece9ec6895%3A0x84747b9ca69c6ef5!2sAv.%20Corrientes%202565%2C%20C1046AAD%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1712951180468!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
         </div>
     </div>
 </div>

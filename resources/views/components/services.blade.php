@@ -1,5 +1,5 @@
-<div class="services">
-    <h2>Nuestros Servicios</h2>
+<div class="services container">
+    <h2>Servicios</h2>
     <div class="data">
         <x-service :services="$data"/>
     </div>

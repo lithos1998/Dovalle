@@ -7,18 +7,15 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $data = Service::select('services.*')
-            ->join('category_service', 'services.service_id', '=', 'category_service.service_id')
-            ->where('category_service.category_id', '4')
-            ->get() ;
+        // main services
+        $idNames = ['ley_257', 'puesta_a_tierra', 'subdivision', 'avisos_obra', 'solicitud_planos', 'informe_dominio', 'fachadas', 'municipales', 'planos_evacuacion'];
         
-        return view('home.index', compact($data, 'data'));
+            // select
+        $data = Service::whereIn('id_name', $idNames)->get();
+        // dd($data);
+        
+        return view('home.index', compact('data'));
     }
 }

@@ -1,6 +1,6 @@
 @php
     $nav_links = [
-        'Inicio' => '/', 'Servicios' => '/servicios', 'Referencias' => '/referencias', 'Nosotros' => '/nosotros', 'Contacto' => '/contacto'
+        'Inicio' => '/', 'Servicios' => '/servicios', 'Valores' => '/nosotros', 'Referencias' => '/referencias', 'Contacto' => '/contacto'
     ]
 @endphp
 
@@ -11,7 +11,7 @@
     <div class="data-header">
         <div><i class="fa-regular fa-envelope"></i> <p>estudiodovalle@gmail.com</p></div>
         <div><i class="fa-brands fa-whatsapp"></i> <p>11-5977-9954</p></div>
-        <div><i class="fa-solid fa-location-dot"></i> <p>Pilar 836, Liniers</p></div>
+        <div><i class="fa-solid fa-location-dot"></i> <p>Av. Corrientes 2565 3º 4</p></div>
     </div>
 </div>
 
@@ -43,11 +43,10 @@
 <div class="data-header-mobile">
     <div class="email-estudio"><i class="fa-solid fa-envelope"></i> <p>estudiodovalle@gmail.com</p></div>
     <div style="width:100%;margin-top:15px">
-        <div class="address-estudio"><i class="fa-solid fa-location-dot"></i> <p>Pilar 836, Liniers</p></div>
+        <div class="address-estudio"><i class="fa-solid fa-location-dot"></i> <p>Av. Corrientes 2565 3º 4</p></div>
         <div class="phone-estudio"><i class="fa-solid fa-phone"></i> <p>11-5977-9954</p></div>
     </div>
 </div>
-
 
 
 {{-- <div class="fixed-header" id="fixedHeader">

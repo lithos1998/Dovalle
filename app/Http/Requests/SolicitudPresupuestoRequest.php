@@ -48,13 +48,3 @@ class SolicitudPresupuestoRequest extends FormRequest
         ];
     }
 }
-
-// return [
-//     'nombre'=>'required',
-//     'email'=>'required|email',
-//     'telefono'=>'required|integer|size:10',
-//     'rubro'=>'required',
-//     'm2'=>'required|size:8',
-//     'direccion'=>'required',
-//     'tramite'=>'required'
-// ];
