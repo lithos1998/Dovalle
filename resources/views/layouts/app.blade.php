@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Tilt+Neon&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/icono.ico">
+    <link rel="icon" href="/assets/img/icono.ico">
     <script src="https://kit.fontawesome.com/aa47ff6f99.js" crossorigin="anonymous"></script>
     
     <title>Estudio Dovalle</title>

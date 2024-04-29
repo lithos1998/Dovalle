@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Http\Request;
+
 
 class ServiceApiController extends Controller
 {
@@ -40,6 +40,23 @@ class ServiceApiController extends Controller
             return response()->json($mainServices, 200);
         }catch (ModelNotFoundException $e){
             return response()->json(['error' => 'No se encontraron los servicios principales'], 404);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Ocurrió un error inesperado'], 500);
+        }
+    }
+
+    public function shared_services(){
+        try{
+            // return the services (only icons and titles) in json format
+            $services = Service::select('name', 'icon')->get();
+
+            if ($services->isEmpty()) {
+                throw new ModelNotFoundException();
+            }
+    
+            return response()->json($services, 200);
+        }catch (ModelNotFoundException $e){
+            return response()->json(['error' => 'No se encontraron los servicios'], 404);
         } catch (\Exception $e) {
             return response()->json(['error' => 'Ocurrió un error inesperado'], 500);
         }

@@ -65,6 +65,12 @@
     --titles: 'Lobster';
 }
 
+.slide{
+    width: 100%;
+    background-color: var(--dark-gray);
+    height: 450px;
+}
+
 body{
     background-color: var(--background);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.872);
@@ -147,7 +153,7 @@ body{
         font-size: 50px;
         cursor: pointer;
         transition: all .3s ease;
-        color: var(--main-blue);
+        color: var(--light-gray);
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
     .btn-volver-arriba a i:hover{
@@ -600,29 +606,36 @@ body{
     }
 
     /* services index */
+        .index-services{
+            padding: 0px 45px !important;
+        }
+
+        .index-services .services{
+            padding-top: 0px !important;
+        }
+
         .index-services .services .data{
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .index-services .services .data .service{
             flex-direction: row;
-            width: 70% !important;
+            width: 48% !important;
             height: 100% !important;
-            margin: 20px 0px;
+            margin: 60px 0px;
         }
 
-        /* .index-services .services .data .service img{
-            height: 300px;
-            width: 300px;
-        } */
+        .index-services .services .data .service img{
+            width: 350px;
+        }
 
         .index-services .services .data .service div{
             margin-left: 40px;
-            height: 300px;
             display: flex;
             flex-direction: column;
             align-content: space-between;
-            flex-wrap: wrap;
         }
 
         .index-services .services .data .service div h3{
@@ -717,6 +730,7 @@ body{
         font-size: 50px;
         color: var(--background);
         text-align: center;
+        text-shadow: 1px 3px 6px #0000008b;
     }
 
     .references h2{
@@ -805,7 +819,7 @@ body{
     footer{
         margin-top: 5px;
         width: 100%;
-        height: 240px;
+        height: 190px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -839,7 +853,7 @@ body{
     }
 
     .footer-logo img{
-        width: 200px;
+        width: 180px;
         height: 100%;
     }
 
@@ -882,7 +896,33 @@ body{
       }
 /* alert message */
 
-
+/* carrousel */
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .carousel-inner {
+        display: flex;
+        /* animation: carouselMove 300s linear infinite; */
+    }
+    
+    .carousel-item {
+        flex: 0 0 auto;
+        margin-right: 20px; /* Espacio entre cada logo */
+    }
+    
+    /* @keyframes carouselMove {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    } */
+    
+    .carousel-item img {
+        margin: 0px 10px;
+        max-width: 100%;
+        max-height: 160px ;
+    }
+/* carrousel */
 
 /* media queries */
     @media screen and (max-width: 1600px){

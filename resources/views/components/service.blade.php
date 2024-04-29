@@ -1,6 +1,6 @@
 @foreach ($services as $service )
     <div class="service">           
-        <a class="icon-div" href="{{-- /servicios/{{ $service['service_id'] }} --}}">
+        <a class="icon-div">
             <i class="{{ $service['icon'] }}"></i>
         </a>
         <h3>{{ $service['name'] }}</h3>

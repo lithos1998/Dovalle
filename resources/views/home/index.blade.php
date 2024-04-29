@@ -2,6 +2,8 @@
 
 
 @section('content')
+    {{-- <div class="slide"></div> --}}
+
     @include('components.services')
     
     @include('components.about-us')

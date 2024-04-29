@@ -12,9 +12,8 @@ class HomeController extends Controller
         // main services
         $idNames = ['ley_257', 'puesta_a_tierra', 'subdivision', 'avisos_obra', 'solicitud_planos', 'informe_dominio', 'fachadas', 'municipales', 'planos_evacuacion'];
         
-            // select
+        // select
         $data = Service::whereIn('id_name', $idNames)->get();
-        // dd($data);
         
         return view('home.index', compact('data'));
     }

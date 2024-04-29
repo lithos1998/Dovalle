@@ -6,15 +6,15 @@ use Illuminate\View\Component;
 
 class Services_data extends Component
 {
-    public $id;
+    public $services;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($id)
+    public function __construct($services)
     {
-        $this->id = $id;
+        $this->services = $services;
     }
 
     /**

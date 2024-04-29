@@ -155,23 +155,23 @@ class Data{
     public static $references = [
         [
             'icon' => 'fa-solid fa-stamp',
-            'title' => 'habilitaciones realizadas',
-            'number' => '373'
+            'title' => 'Habilitaciones realizadas',
+            'id' => 'habilitaciones'
         ],
         [
             'icon' => 'fa-solid fa-circle-check',
-            'title' => 'informes realizados',
-            'number' => '1893'
+            'title' => 'Informes realizados',
+            'id' => 'informes'
         ],
         [
             'icon' => 'fa-regular fa-map',
-            'title' => 'gestiones realizadas',
-            'number' => '582'
+            'title' => 'Gestiones realizadas',
+            'id' => 'gestiones'
         ],
         [
             'icon' => 'fa-solid fa-helmet-safety',
-            'title' => 'trabajos realizados',
-            'number' => '53'
+            'title' => 'Trabajos realizados',
+            'id' => 'trabajos'
         ]
     ];
 }

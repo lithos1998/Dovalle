@@ -13,6 +13,10 @@ $(document).ready(function(){
     var direccion = $('#direccion');
     var tramite = $('#tramite');
 
+    
+
+    
+
     if(window.location.pathname == '/contacto'){
         go_section('#contact-us-div');
     }
@@ -170,7 +174,7 @@ $(document).ready(function(){
         }
     });
 
-    $('#Nosotros').click(function(e){
+    $('#Valores').click(function(e){
         if(window.location.pathname == '/'){
             e.preventDefault();
             go_section('#about-us');
@@ -195,5 +199,4 @@ $(document).ready(function(){
 
     formulario.on('submit', validateForm);
 
-    
 });

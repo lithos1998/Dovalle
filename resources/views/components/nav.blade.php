@@ -6,7 +6,7 @@
 
 
 <div class="nav-header">
-    <img src="/img/logotipo.png">
+    <img src="assets/img/logotipo.png">
 
     <div class="data-header">
         <div><i class="fa-regular fa-envelope"></i> <p>estudiodovalle@gmail.com</p></div>
