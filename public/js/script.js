@@ -13,9 +13,6 @@ $(document).ready(function(){
     var direccion = $('#direccion');
     var tramite = $('#tramite');
 
-    
-
-    
 
     if(window.location.pathname == '/contacto'){
         go_section('#contact-us-div');
@@ -62,7 +59,7 @@ $(document).ready(function(){
     }
 
     function showMobileMenu(){        
-        toggleMenu(210);
+        toggleMenu(194);
         menu_mobile = true;
         $('#bars-menu').removeClass('fa-bars');
         $('#bars-menu').addClass('fa-xmark');

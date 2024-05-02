@@ -306,14 +306,15 @@ body{
             width: 100%;
             position: absolute;
             top: -250px;
-            background-color: var(--dark-gray);
+            background-color:var(--main-blue);
             flex-direction: column;
             display: flex;
             justify-content: space-evenly;
             align-content: space-evenly;
             align-items: baseline;
             height: 240px;
-            z-index: 0;
+            z-index: 2000;
+            box-shadow: 3px 4px 8px #00000090;
         }
 
         .nav-links-mobile .nav-link{
@@ -558,7 +559,7 @@ body{
         margin-bottom: 15px;
         transition: all .3s ease-in-out;
         text-shadow: 4px 5px 9px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
+        cursor: default;
     }
 
     .service i:hover{
@@ -734,7 +735,8 @@ body{
     }
 
     .references h2{
-        margin: 40px 0px;        
+        margin-top: 40px;
+        margin-bottom: 20px;     
         font-size: 50px;
         color: var(--dark-gray);
         text-align: center;
@@ -783,7 +785,6 @@ body{
 
 
     .our-references{
-        padding-top: 60px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -925,23 +926,25 @@ body{
 /* carrousel */
 
 /* media queries */
-    @media screen and (max-width: 1600px){
-        .services .data .service {
-            width: 320px !important;
+
+    @media screen and (max-width: 1700px){
+        .container {
+            padding: 0px 80px !important;
+        }
+
+        .contact-data p{
+            font-size: 20px;
         }
     }
 
+   
     @media screen and (max-width: 1500px){
         .services .data .service {
-            width: 300px !important;
-        }
-        
-        .service h3 {
-            font-size: 22px;
+            width: 400px !important;
         }
 
-        .about-us h2{
-            margin-top: 0px !important;
+        .service h3 {
+            font-size: 27px;
         }
 
         .contact-data{
@@ -959,6 +962,17 @@ body{
 
         .index-services .services .data .service {
             width: 80% !important;
+            margin: 0px !important;
+        }
+
+
+        .carousel-item img {
+            max-height: 140px !important;
+        }
+
+        .index-services .services .data .service{
+            margin-bottom: 30px  !important;
+            align-items: flex-start;
         }
     }
 
@@ -985,16 +999,15 @@ body{
         }
 
         .nav-link{
-            font-size: 20px !important;
+            font-size: 25px !important;
         }
 
         .services .data .service{
-            width: 280px !important;
+            width: 360px !important;
         }
     }
 
     @media screen and (max-width: 1300px){
-
         .service h3{
             font-size: 26px;
         }
@@ -1032,8 +1045,8 @@ body{
             margin-top: 10px !important;
         }
 
-        .services .data .service{
-            width: 250px !important;
+        .about-us{
+            padding-top: 20px !important;
         }
 
         .about-us p{
@@ -1071,6 +1084,10 @@ body{
         .index-services .services{
             padding-top: 20px !important;
         }
+
+        .carousel-item img {
+            max-height: 130px !important;
+        }
     }
 
     @media screen and (max-width: 1200px){
@@ -1090,16 +1107,33 @@ body{
             padding: 0px 30px;            
         }
 
-        .services .data .service{
-            width: 210px !important;
+        #mapa{
+            height: 350px !important;
         }
 
-        #about-us{
-            margin-top: 0px !important;
+        .contact-data{
+            padding-right: 0px !important;
+        }
+
+        .budget{
+            padding-left: 0px !important;
         }
 
         .reference span{
             margin-left: 10px !important;
+            font-size: 55px !important;
+        }
+
+        .reference i{
+            font-size: 60px !important;
+        }
+
+        .services .data .service{
+            width: 300px !important;
+        }
+
+        .carousel-item img {
+            max-height: 125px !important;
         }
     }
 
@@ -1121,16 +1155,12 @@ body{
         }
 
         .services .data .service{
-            width: 240px !important;
+            width: 280px !important;
             margin: 10px 10px !important;
         }
 
         .service h3{
             font-size: 22px;
-        }
-        
-        .services .data .service{
-            width: 180px !important;
         }
 
         .nav-header .data-header div, .data-header-mobile div{
@@ -1138,7 +1168,8 @@ body{
         }
 
         .about-us p{
-            font-size: 21px !important;
+            font-size: 24px !important;
+            padding: 0px !important;
         }
 
         .reference i {
@@ -1163,16 +1194,12 @@ body{
     }
 
     @media screen and (max-width: 1024px){
-        .services .data .service{
-            width: 185px !important;
-        }
-
         .container{
             padding: 0px 50px !important;
         }
 
         .nav-link{
-            font-size: 18px !important;
+            font-size: 24px !important;
         }
 
         .index-services .services .data .service div p{
@@ -1217,7 +1244,7 @@ body{
         }
 
         .services .data .service{
-            width: 170px !important;
+            width: 250px !important;
         }
 
         .contact-data{
@@ -1234,6 +1261,7 @@ body{
 
         .reference{
             width: 50% !important;
+            margin-bottom: 30px !important;
         }
 
         .index-services .services .data .service img{
@@ -1252,6 +1280,10 @@ body{
 
         .services h2{
             font-size: 35px !important;
+        }
+
+        .carousel-item img{
+            max-height: 110px !important;
         }
     }
 
@@ -1277,11 +1309,12 @@ body{
         }
 
         .services .data .service{
-            width: 150px !important;
+            width: 200px !important;
         }
 
         .services{
             padding-top: 30px !important;
+            margin-top: 0px !important;
         }
 
         .contact-data div{
@@ -1342,6 +1375,14 @@ body{
             height: 180px !important;
         }
 
+        .services .data .service{
+            width: 180px !important;
+        }
+
+        .references h2{
+            font-size: 40px !important;
+        }
+
     }
 
     @media screen and (max-width: 600px){
@@ -1396,7 +1437,7 @@ body{
         }
 
         .services .data .service{
-            width: 120px !important;
+            width: 145px !important;
             height: 180px !important;
         }
 
@@ -1443,6 +1484,34 @@ body{
             font-size: 30px !important;
         }
 
+        .skills{
+            flex-wrap: wrap;
+        }
+
+        .skill{
+            width: 50% !important;
+        }
+
+        .budget, .contact-data{
+            padding: 0px !important;
+        }
+
+        .carousel-item img{
+            max-height: 90px !important;
+        }
+
+        .reference p{
+            text-align: center;
+        }
+
+        .nav-header {
+            height: 138px !important;
+        }
+
+        .nav-header img {
+        
+            height: 120px !important;
+        }
     }
 
     @media screen and (max-width: 650px){
@@ -1477,6 +1546,10 @@ body{
             font-size: 14px !important;
         }
 
+
+        .index-services .services .data .service{
+            margin-bottom: 20px !important;
+        }
     }
 
 
@@ -1557,7 +1630,7 @@ body{
         }
 
         .budget{
-            padding: 0px 40px;
+            padding: 0px 40px !important;
         }
 
         .nav-header img{
@@ -1572,13 +1645,10 @@ body{
             font-size: 34px !important;
         }
 
-        .skills{
-            flex-direction: column;
-        }
-
         .skill p{
             margin-top: 10px !important;
             margin-bottom: 30px !important;
+            font-size: 16px !important;
         }
 
         .about-us p{
@@ -1586,7 +1656,7 @@ body{
         }
 
         .services .data .service{
-            width: 150px !important;
+            width: 170px !important;
         }
 
         nav .nav-social{
@@ -1604,9 +1674,51 @@ body{
         .reference div{
             margin-bottom: 10px !important;
         }
+
+        .references h2{
+            font-size: 35px !important;
+        }
+
+        .service h3{
+            font-size: 20px !important;
+        }
+
+        .carousel-item img{
+            max-height: 75px !important;
+        }
+
+        .references h2{
+            font-size: 30px !important;
+        }
+        
+        .nav-header img {
+            padding-top: 20px !important;
+            height: 120px !important;
+        }
+
+        .footer-logo img {
+            width: 135px !important;
+        }
+
+        footer{
+            height: 140px !important;
+        }
+
+        .service i{
+            font-size: 55px !important;
+        }
+
+        .services .data .service{
+            height: 140px !important;
+        }
+
+        .service i{
+            margin-bottom: 0px !important;
+        }
+
     }
 
-    @media screen and (max-width: 440px){
+    @media screen and (max-width: 440px){        
         .email-estudio i,
         .address-estudio i, 
         .phone-estudio i,
@@ -1626,6 +1738,44 @@ body{
 
         .reference span{
             font-size: 40px !important;
+        }
+
+        .carousel-item img{
+            max-height: 65px !important;
+        }
+
+        .services .data .service{
+            width: 150px !important;
+        }
+
+        .about-us p{
+            font-size: 18px !important;
+        }
+
+        .about-us-content{
+            padding-top: 1px !important;
+        }
+
+        .skill p{
+            font-size: 16px !important;
+        }
+    }
+
+    @media screen and (max-width: 400px){
+        .reference i{
+            font-size: 40px !important;
+        }
+
+        .reference span{
+            font-size: 30px !important;
+        }
+
+        .reference p{
+            font-size: 18px !important;        
+        }
+
+        .service h3{
+            font-size: 18px !important;
         }
     }
 
