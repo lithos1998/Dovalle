@@ -2,7 +2,7 @@
     <div class="contact-us container" id="contact-us">    
         <div class="budget">
             <h2>Solicita tu presupuesto aqui</h2>
-            <form id="budget-form" class="budget-form" action="/sentMail" enctype="multipart/form-data" method="POST">
+            <form id="budget-form" class="budget-form" action="/sentMail" enctype="application/x-www-form-urlencoded" method="POST">
                 @csrf
 
                 <div class="form-group">
@@ -43,7 +43,7 @@
 
                 <div class="form-group">
                     <label for="inputTramite">Tramite *</label>
-                    <input type="text" class="form-control" name="tramite" id="tramite" placeholder=" Ej. Habilitacion">
+                    <input type="text" class="form-control" value="<?= isset($_GET['tramite']) ? $_GET['tramite'] : ""; ?>" name="tramite" id="tramite" placeholder=" Ej. Habilitacion">
                     <span class="input-error">{{ $errors->first('tramite') }}</span>
                 </div>
                 
@@ -53,14 +53,11 @@
         </div>
         
         <div class="contact-data">
-            <div><div class="box"><i class="fa-regular fa-envelope"></i></div> <p>estudiodovalle@gmail.com</p></div>
-            <div><div class="box"><i class="fa-brands fa-whatsapp"></i></div> <p>11-5977-9954</p></div>
-            <div><div class="box"><i class="fa-brands fa-facebook"></i></div> <p>EstudioDovalle Srl</p></div>
-            <div><div class="box"><i class="fa-brands fa-instagram"></i></div> <p>@estudiodovalle</p></div>
-            <div><div class="box"><i class="fa-solid fa-location-dot"></i></div> <p>Av. Corrientes 2565 3º 4</p></div>
+            @foreach ( Data::$contact_info as $info )
+                <div><div class="box"><i class="{{ $info['icon'] }}"></i></div> <p>{{ $info['title'] }}</p></div>
+            @endforeach
         
-            <iframe id="mapa" src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376.4275724969588!2d-58.40324159481736!3d-34.60473912207922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaece9ec6895%3A0x84747b9ca69c6ef5!2sAv.%20Corrientes%202565%2C%20C1046AAD%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1712951180468!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
+            <iframe id="mapa" src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376.4275724969588!2d-58.40324159481736!3d-34.60473912207922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaece9ec6895%3A0x84747b9ca69c6ef5!2sAv.%20Corrientes%202565%2C%20C1046AAD%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1712951180468!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
         </div>
     </div>
 </div>

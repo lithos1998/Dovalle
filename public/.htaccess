@@ -19,3 +19,7 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+# nadie puede ejecutar cambios en el index
+# <Files "index.php">
+#    Require all denied
+# </Files>

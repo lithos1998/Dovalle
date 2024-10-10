@@ -62,7 +62,7 @@
 
                     @foreach ( $clients as $client )
                         <div class="carousel-item">
-                            <img src="/assets/img/clients/{{ $client }}.png">                                  
+                            <img src="/assets/img/clients/{{ $client }}.webp" alt="{{ $client }}_logo">                                  
                         </div>
                     @endforeach              
             </div>
