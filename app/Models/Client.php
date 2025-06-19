@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class Client extends Model
 {
     use HasFactory;
+    public $table = "clients";
     public $timestamps = false;
-    protected $table = 'services';
-    
+
+    protected $fillable = ['name', 'lastname', 'fantasy_name','cuit', 'category', 'email', 'cel_phone', 'phone', 'address'];
+
     public function budgets()
     {
         return $this->hasMany(Budget::class);
@@ -20,4 +22,3 @@ class Service extends Model
         return $this->belongsToMany(Sale::class);
     }
 }
-

@@ -73,7 +73,7 @@
 
 body{
     background-color: var(--background);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.872);
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.872); */
 }
 
 .main{
@@ -948,6 +948,820 @@ body{
         max-height: 160px ;
     }
 /* carrousel */
+
+/* Panel de control */
+.login{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-blue);
+    padding: 60px 60px;
+    border-radius: 20px;
+    margin-top: 70px;
+}
+
+.login form input{
+    border-color: var(--main-white) !important;
+    color: var(--main-white) !important;
+}
+
+.login form h4{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: var(--main-white) !important;
+}
+
+.login form input::placeholder{
+    color: var(--main-white) !important;
+}
+
+.login form .button-show:hover{
+    background-color: var(--main-white) !important;
+    color: var(--main-blue) !important;
+}
+
+.options{
+    color: var(--main-white) !important;
+    font-family: var(--tilt-neon) !important;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+    outline: none; /* Quita el borde de enfoque */
+    border: none; /* Quita el borde del select */
+}
+
+.options option{
+    background-color: var(--main-blue) !important;
+}
+
+.administrador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tables{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tables h3{
+    color: var(--dark-gray);
+    text-align: center;
+    font-size:50px;
+    margin-top: 30px;
+}
+
+.tables .filters{
+    width: 100%;
+}
+
+.tables .filters form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.tables .filters form select{
+    width: 220px;
+}
+
+.tables .filters form div input,
+.tables .filters form div span{
+    font-family: var(--roboto-light);
+    font-size: 22px;
+}
+
+.tables .filters form div input{
+    border: unset !important;
+    border-bottom: 3px solid var(--main-blue) !important;
+}
+
+.tables .filters form select,
+.tables .filters form div{
+    margin-right: 80px;
+}
+
+.tables .filters form button{
+    margin-left: 30px;
+}
+
+
+
+table{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+thead{   
+    height: 40px;
+}
+
+thead tr{
+    background-color: var(--main-blue);
+}
+
+thead tr th{
+    color: var(--main-white);
+}
+
+tbody{
+    background-color: var(--main-gray);
+}
+
+th, td{
+    color: var(--main-blue);
+    font-family: var(--roboto-medium);
+    border: 1px solid var(--main-white);
+    padding: 0px 10px;
+}
+
+th{
+    padding: 20px 10px;
+}
+
+.row-table{
+    transition: all .2s ease-in-out;
+}
+
+.row-table:hover {
+    background-color: #b4b0b0 !important;
+    cursor: pointer;
+}
+
+.row-table .circle-status {
+    font-size: 70px;
+    margin-right: 20px;
+    height: fit-content;
+}
+
+.row-table .Pendiente {
+    color: var(--main-blue) !important;
+}
+
+.row-table .Aprobado{
+    color: rgb(23, 179, 23) !important;
+}
+
+.row-table .Rechazado,
+.row-table .Vencido
+{
+    color: rgb(179, 23, 23) !important;
+}
+
+
+tr{
+    background-color: var(--main-white);
+}
+
+tr:nth-child(even){
+    background-color: rgb(215, 210, 210);
+}
+
+.title-panel{
+    font-size: 60px;
+    margin-right: 40px;
+    color: var(--dark-gray);
+    font-family: var(--tilt-neon);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button{
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    font-family: var(--roboto-medium);
+}
+
+.buttons .button{
+    font-size: 16px;
+    padding: 7px 10px;
+}
+
+.button-show{
+    background-color: transparent;
+    color: var(--main-blue);
+    border: 3px solid var(--main-blue);
+}
+
+.button-show:hover{
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.button-edit{
+    background-color: transparent;
+    color: green;
+    border: 3px solid green;
+}
+
+.button-edit:hover{
+    background-color: green;
+    color: white;
+}
+
+.button-delete{
+    background-color: transparent;
+    color: red;
+    border: 3px solid red;
+}
+
+.button-delete:hover{
+   background-color: red;
+   color: white;
+}
+
+.button-aprobe{
+    background-color: transparent;
+    color: green;
+    border: 3px solid green;
+}
+
+.button-aprobe:hover{
+    background-color: green;
+    color: white;
+}
+
+.button-check{
+    background-color: transparent;
+    color: var(--main-blue);
+    border: 3px solid var(--main-blue);
+}
+
+.button-check:hover{
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.message-div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.message-div span{
+    font-size: 40px;
+    font-family: var(--roboto-light);
+    color: var(--dark-gray);
+}
+
+
+.t-name{
+    width: 20%;
+}
+
+.t-desc{
+    width: 65%;
+}
+
+.t-act{
+    width: 15%;
+}
+
+.add-button{
+    width: 100%;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    background-color: var(--main-blue);
+    border: 3px solid var(--main-blue);
+    color: var(--main-white);
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px; 
+    font-family: var(--roboto-medium);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.608);
+}
+
+.add-button:hover{
+    background-color: transparent !important;
+    color: var(--main-blue);
+    box-shadow: unset;
+}
+
+.create{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: unset !important;
+}
+
+.create-form{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: var(--main-white);
+    padding: 30px 30px;
+    box-shadow: 3px 4px 9px #000000b1;
+    border-radius: 30px;
+}
+
+.client{
+    width: 100%;
+    padding: 20px 60px;
+}
+
+.client h3{
+    font-size: 60px;
+    font-family: var(--roboto-light);
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+}
+
+.client .data{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main-blue);
+    width: 100%;
+    border-radius: 40px;
+    padding: 50px 50px;
+}
+
+.client .data .client-data{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.client .data .client-debt{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.client .data .client-debt .debt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.client .data .client-debt .debt span{
+    color: var(--main-white);
+    font-size: 60px;
+    font-family: var(--roboto-medium);
+}
+
+.client .data .client-debt .debt .debt-amount{
+    font-size: 100px;
+    font-family: var(--roboto-light);
+    padding-left: 20px;
+}
+
+.client .data .client-data div{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+}
+
+.client .data .client-data div span{
+    color: var(--main-white);
+    font-family: var(--roboto-medium);
+    font-size: 30px;
+    width: 20% !important;
+}
+
+.client .data .client-data div .data-value{
+    font-family: var(--roboto-light) !important;
+    padding-left: 20px;
+    width: 80% !important;
+}
+
+
+.clients{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clients-create,
+.budgets-create,
+.taxes-create,
+.sales-create{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.clients-create select{
+    width: 48% !important;
+}
+
+.clients-create input,
+.budgets-create input,
+.taxes-create input,
+.login form .user,
+.login form .pass,
+.sales-create input{
+    margin-bottom: 20px;
+    height: 40px;
+    background-color: transparent;
+    border: unset;
+    border-bottom: 3px solid var(--main-blue);
+    font-size: 22px;
+}
+
+.search-input{
+    height: 40px;
+    background-color: transparent;
+    border: unset;
+    border-bottom: 3px solid var(--main-blue);
+    font-size: 22px;
+}
+
+select{
+    background-color: transparent;
+    border: unset;
+    border-bottom: 3px solid var(--main-blue);
+    font-size: 22px;
+}
+
+.chosen-single{
+    font-family: var(--roboto-light) !important;
+    font-size: 25px !important;
+    height: unset !important;
+}
+
+.chosen-single span{
+   margin: 10px 0px;
+}
+
+.chosen-search-input{
+    font-size: 20px !important;
+    font-family: var(--roboto-regular);
+}
+
+.chosen-results li{
+    font-size: 22px;
+    font-family: var(--roboto-light);
+}
+
+.search-choice{
+    padding: 10px 15px !important;
+    background-image: unset !important;
+    background-color: var(--main-blue) !important;
+}
+
+.search-choice span{
+    font-size: 20px;
+    font-family: var(--roboto-medium);
+    color: var(--main-white);
+    margin-right: 10px;
+}
+
+
+
+
+.clients-create .name, 
+.clients-create .lastname,
+.clients-create .email,
+.clients-create .phone,
+.clients-create .cellphone,
+.clients-create .address,
+.clients-create .cuit
+{
+    width: 48%;
+}
+
+.clients-create .fantasy{
+    width: 100%;
+}
+
+.tr-clients .t-phones{
+    width: 12% !important;
+}
+
+.tr-clients .t-cat{
+    width: 12% !important;
+}
+
+.tr-clients .t-act{
+    width: 18% !important;
+}
+
+.tr-clients .t-cuit{
+    width: 11%;
+}
+
+.tr-clients .t-email{
+    width: 17%;
+}
+
+.tr-clients .t-fantasy,
+.tr-clients .t-address{
+    width: 14% !important;
+}
+
+
+.tr-budgets .t-act{
+    width: 16%;
+}
+
+.tr-budgets .th-observations{
+    width: 12%;
+}
+
+.tr-budgets .th-amount,
+.tr-budgets .th-taxes,
+.tr-budgets .th-status,
+.tr-budgets .th-total{
+    width: 7%;
+}
+.tr-budgets .th-discount{
+    width: 6%;
+}
+.tr-budgets .th-created{
+    width: 8%;
+}
+
+.tr-budgets .th-currency{
+    width: 4%;
+}
+
+.tr-budgets .th-first{
+    width: 4%;
+}
+
+.tr-budgets .th-clients,
+.tr-budgets .th-services{
+    width: 11%;
+}
+
+.budgets-create .select,
+.sales-create .select{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+
+.budgets-create .taxes,
+.sales-create .taxes{
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+
+.sales-create .s-facturador{
+    width: 100% !important;
+}
+
+.budgets-create .dates,
+.sales-create .dates{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.budgets-create .textareas,
+.sales-create .textareas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.budgets-create .status{
+    width: 100% ;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.budgets-create .currency,
+.taxes-create .name,
+.taxes-create .amount{
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.sales-create .currency{
+    width: 18% !important;
+}
+
+.budgets-create .amount{
+    width: 35%;
+}
+
+.sales-create .amount{
+    width: 25%;
+}
+
+.sales-create .cuotes{
+    width: 40%;
+    margin-bottom: 54px;
+}
+
+.budgets-create .dcto,
+.sales-create .dcto{
+    display: flex;
+    flex-direction: row;
+    width: 13%;
+}
+
+.budgets-create .dcto input,
+.sales-create .dcto input{
+    width: 70%;
+}
+
+.budgets-create .dcto span,
+.sales-create .dcto span{
+    width: 30%;
+    font-size: 40px;
+    color: var(--main-blue);
+}
+
+.show-budget{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.show-budget .buttons{
+    margin-top: 30px;
+    width: 60%;
+    justify-content: center;
+}
+
+.show-budget .buttons a,
+.show-budget .buttons form{
+    margin: 0px 20px;
+}
+
+.show-budget .budget{
+    padding: 0px !important;
+    width: 60%;
+}
+
+.show-budget .budget h2{
+    background-color: var(--main-blue);
+    width: 100%;
+    margin: 20px 0px;
+    font-size: 35px !important;
+    border: 2px solid var(--light-gray);
+}
+
+.show-budget .budget .client-data{
+    border: 2px solid var(--light-gray);
+}
+
+.show-budget .budget .client-data h2{
+    font-size: 25px !important;
+    padding: 10px 0px !important;
+    margin: 0px !important;
+}
+
+.show-budget .budget .client-data p{
+    font-size: 22px !important;
+    color: var(--dark-gray);
+    padding: 5px 40px
+}
+
+.show-budget .budget .client-data p span{
+    padding-right: 10px;
+}
+
+.show-budget .budget .budget-dates{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid var(--light-gray);
+    margin: 10px 0px;
+    padding: 5px 40px;
+}
+
+.show-budget .budget .budget-dates p{
+   color: var(--dark-gray);
+   font-size: 27px;
+   font-family: var(--roboto-light) !important;
+}
+
+.budget .tables{
+    width: 100% !important;
+    border: 2px solid var(--light-gray);
+}
+
+.t-left{
+    text-align: center;
+}
+
+.budget-show-row td{
+    padding: 20px 10px;
+}
+
+
+.row-total{
+    background-color: var(--main-blue) !important;
+    color: var(--main-white) !important; 
+    font-size: 20px;
+    font-weight: 700;
+    text-align: end !important;
+}
+
+.tr-taxes .t-act{
+    width: 15%;
+}
+
+.tr-taxes .th-amount{
+    width: 15%;
+}
+
+.tr-taxes .th-name{
+    width: 25%;
+}
+
+.form-span{
+    font-family: var(--montserrat);
+    margin-bottom: 5px;
+}
+
+.send-button{
+    margin-top: 30px;
+    width: 100%;
+    height: 60px;
+    background-color: var(--main-blue) !important;
+    color: var(--main-white);
+    border: unset !important;
+    border-radius: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.send-button:hover{
+    background-color: var(--main-white) !important;
+    color: var(--main-blue);
+    border: 3px solid  var(--main-blue)!important;
+}
+
+.moneda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: var(--main-blue);
+    border-radius: 20px;
+    padding: 20px 30px;
+    color: var(--main-white) !important;
+}
+
+.moneda .transaccion{
+    margin: 39px 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between !important;
+}
+
+.moneda .transaccion .compra,
+.moneda .transaccion .venta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* media queries */
 

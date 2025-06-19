@@ -6,9 +6,12 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\CategoryService;
+use App\Models\Item;
 use App\Models\Service;
+use App\Models\User;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,10 +24,10 @@ class DatabaseSeeder extends Seeder
     {
         Category::factory(4)
             ->sequence(
-                ['category_id' => '1', 'category_name' => 'administraciones',],
-                ['category_id' => '2', 'category_name' => 'inmobiliarias',],
-                ['category_id' => '3', 'category_name' => 'constructoras',],
-                ['category_id' => '4', 'category_name' => 'home',],
+                ['id' => '1', 'name' => 'administraciones',],
+                ['id' => '2', 'name' => 'inmobiliarias',],
+                ['id' => '3', 'name' => 'constructoras',],
+                ['id' => '4', 'name' => 'home',],
             )->create();
 
             
@@ -190,5 +193,68 @@ class DatabaseSeeder extends Seeder
                     ['service_id' => '10', 'category_id' => '2',],
                     ['service_id' => '14', 'category_id' => '2',],
                 )->create();
-        }   
+
+                Item::factory(28)
+                ->sequence(
+                    ['name' => 'Aviso de obra', 'amount' => '50000'],
+                    ['name' => 'Eximicion de Ley 6116', 'amount' => '50000'],
+                    ['name' => 'Habilitacion Carteleria', 'amount' => '125000'],
+                    ['name' => 'Habilitacion Comercial C/ Plano', 'amount' => '350000'],
+                    ['name' => 'Habilitacion Comercial Simple', 'amount' => '300000'],
+                    ['name' => 'Habilitacion Espacio Publico', 'amount' => '125000'],
+                    ['name' => 'Informe de prefactibilidad - ABONO (10)', 'amount' => '240000'],
+                    ['name' => 'Informe de prefactibilidad - ABONO (11-15)', 'amount' => '342000'],
+                    ['name' => 'Informe de prefactibilidad - ABONO (16-20)', 'amount' => '420000'],
+                    ['name' => 'Informe de prefactibilidad - Gestion Express', 'amount' => '50000'],
+                    ['name' => 'Informe de prefactibilidad C/ LFI', 'amount' => '80000'],
+                    ['name' => 'Informe de prefactibilidad Simple', 'amount' => '50000'],
+                    ['name' => 'Informe Tecnico LEY 6116', 'amount' => '50000'],
+                    ['name' => 'Ley 6116 (Chico)', 'amount' => '120000'],
+                    ['name' => 'Ley 6116 (Mediano)', 'amount' => '150000'],
+                    ['name' => 'Ley 6116 (Grande)', 'amount' => '180000'],
+                    ['name' => 'Ley 6116 (Torre)', 'amount' => '300000'],
+                    ['name' => 'Ley Autoproteccion 5920 (DDJJ)', 'amount' => '30000'],
+                    ['name' => 'Mantenimiento Edificilio', 'amount' => '0'],
+                    ['name' => 'Medicion Puesta a Tierra', 'amount' => '100000'],
+                    ['name' => 'Modificacion de conservador', 'amount' => '25000'],
+                    ['name' => 'Obleas Anuales', 'amount' => '50000'],
+                    ['name' => 'Permiso de obra', 'amount' => '0'],
+                    ['name' => 'Plano de evacuacion', 'amount' => '0'],
+                    ['name' => 'Relevamiento Tecnico c/ Informe', 'amount' => '150000'],
+                    ['name' => 'Solicitud de planos', 'amount' => '50000'],
+                    ['name' => 'Subdivision', 'amount' => '0'],
+                    ['name' => 'Vinculacion AGIP/AGC', 'amount' => '35000']
+                )->create();
+
+                User::factory(3)
+                ->sequence(
+                    [
+                        'user' => 'admin',
+                        'password' => Hash::make('admin'),
+                        'privileges' => 'admin',
+                    ],
+                    [
+                        'user' => 'pascual',
+                        'password' => Hash::make('pascual123'),
+                        'cuit' => 20411507611,
+                        'ptovta' => 1,
+                        'privileges' => 'facturador',
+                    ],
+                    [
+                        'user' => 'nicolas',
+                        'password' => Hash::make('nico123'),
+                        'cuit' => 20411507622,
+                        'ptovta' => 2,
+                        'privileges' => 'facturador',
+                    ],
+                    [
+                        'user' => 'angela',
+                        'password' => Hash::make('angela123'),
+                        'cuit' => 0,
+                        'ptovta' => 0,
+                        'privileges' => 'user',
+                    ],
+                )->create();
+                
+        }    
 }

@@ -26,6 +26,41 @@ $(document).ready(function(){
         go_section('#our-references');
     }
 
+    $('.chosen-select').chosen({
+        width: '100%', // Ajusta el ancho automáticamente
+        no_results_text: "No se encontraron resultados", // Mensaje cuando no hay resultados
+        placeholder_text_multiple: "Selecciona opciones..." // Texto por defecto
+    });
+
+    $('.select-tag').chosen({
+        placeholder_text_multiple: 'Seleccione'
+    });
+
+    function getDate() {
+        const today = new Date();
+        const day = today.getDate().toString().padStart(2, '0'); // Día con dos dígitos
+        const month = (today.getMonth() + 1).toString().padStart(2, '0'); // Mes (se suma 1 porque enero es 0)
+        const year = today.getFullYear();
+    
+        return `${year}-${month}-${day}`;
+    }
+
+    function getDateExpired(months) {
+        const today = new Date();
+        
+        today.setMonth(today.getMonth() + months);
+        
+        const day = today.getDate().toString().padStart(2, '0'); // Día con dos dígitos
+        const month = (today.getMonth() + 1).toString().padStart(2, '0'); // Mes (se suma 1 porque enero es 0)
+        const year = today.getFullYear();
+    
+        return `${year}-${month}-${day}`;
+    }
+    
+    window.onload = function() {
+        document.getElementById('start').value = getDate();
+        document.getElementById('expired').value = getDateExpired(3);
+    };
 
     function go_section(section_id){
         var contact_top = $(section_id).offset().top - 130;
@@ -191,6 +226,18 @@ $(document).ready(function(){
             hideMobileMenu();
         } else {
             showMobileMenu();
+        }
+    });
+
+    $('#itemSelect').on('change', function(){
+        const itemSelect = document.getElementById('itemSelect');
+        const selectedOption = itemSelect.options[itemSelect.selectedIndex];
+        const price = selectedOption.getAttribute('data-price');
+
+        if (price) {
+            document.getElementById('amount').value = price;
+        } else {
+            document.getElementById('amount').value = '';
         }
     });
 
